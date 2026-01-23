@@ -143,14 +143,10 @@ header:
 
   <h3>Prof. Biao Chen (IEEE Fellow)</h3>
   <p><strong>Syracuse University, USA</strong></p>
-
   <br>
-
   <h3>Prof. Divesh Aggarwal</h3>
   <p><strong>National University of Singapore</strong></p>
-
   <br>
-
   <h3>Prof. Chunming Tang</h3>
   <p><strong>Southwest Jiaotong University, China</strong></p>
 </div>

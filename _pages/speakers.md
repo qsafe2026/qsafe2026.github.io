@@ -8,8 +8,6 @@ author_profile: false
   h2, h3 { color: #0056b3 !important; }
 </style>
 
-## Keynote Speakers
-
 ### Prof. Biao Chen (IEEE Fellow)
 **Syracuse University, USA**
 

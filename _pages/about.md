@@ -52,6 +52,30 @@ header:
   .page__footer-copyright {
     font-size: 16px !important;
   }
+
+  
+  /* === 新增：日程表样式 === */
+  .program-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 18px !important; /* 保持和你之前设置的大字体一致 */
+  }
+  .program-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee; /*每一行下面的浅灰分割线*/
+    vertical-align: top;
+  }
+  .program-table .time-col {
+    width: 160px; /* 强制固定时间列的宽度 */
+    font-weight: bold;
+    color: #444;
+  }
+  .program-table .event-col {
+    /* 事件列自动占据剩余空间 */
+  }
+
+
   
 </style>
 

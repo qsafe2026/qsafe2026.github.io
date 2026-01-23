@@ -13,7 +13,7 @@ title                    : "" # <--- 修改：网站标题
 title_separator          : "-"
 name                     : &name "QSAFE 2026" # <--- 修改：网页标签名
 description              : &description "QSAFE 2026" # <--- 修改：网站描述
-url                      : "https://Buzzbbb.github.io" # <--- 【必填】请改成你的实际网址
+url                      : "https://qsafe2026.github.io" # <--- 【必填】请改成你的实际网址
 baseurl                  : "" 
 repository               : "Buzzbbb/Buzzbbb.github.io" # 
 

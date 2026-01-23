@@ -18,13 +18,13 @@ header:
   }
   body, p, li, td, th, div { 
     font-size: 18px !important;
-    line-height: 1.6 !important; /* 稍微调小行高，让内容更紧凑 */
+    line-height: 1.6 !important;
   }
 
   /* 3. 标题样式 */
   h2 { 
     font-size: 28px !important; 
-    color: #0056b3 !important; /* 湛蓝色 */
+    color: #0056b3 !important;
     margin-top: 0 !important;
     margin-bottom: 20px !important;
   }
@@ -33,32 +33,41 @@ header:
     color: #0056b3 !important;
   }
 
-  /* 4. 【关键修改】强制页面极度变宽 */
-  .page__inner-wrap { 
-    width: 99% !important;     /* 宽度拉到 99% */
-    max-width: 100% !important; 
-    margin: 0 auto !important;
-    padding-right: 0 !important;
+  /* === 4. 【核心修改】暴力拓宽页面 === */
+  /* 只要是这类容器，统统强制拉到 100% */
+  #main, .page, .page__content, .archive {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
-  .page__content { 
-    width: 100% !important; 
-    max-width: 100% !important; 
-  }
-  /* 修复可能的归档页限制 */
-  .archive { 
-    width: 100% !important; 
-    padding-right: 0 !important; 
+  
+  /* 确保侧边栏完全消失，不占空间 */
+  .sidebar {
+    display: none !important;
+    width: 0 !important;
   }
 
-  /* 5. 卡片盒子样式优化 */
+  /* 控制内容区域的最终宽度：96% (留一点点边距) */
+  .page__inner-wrap {
+    width: 96% !important;     
+    max-width: 100% !important; 
+    margin: 0 auto !important; /* 居中 */
+    padding: 0 !important;
+    float: none !important;    /* 防止浮动导致的错位 */
+  }
+
+  /* 5. 卡片盒子样式 */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
     border-left: 6px solid #0056b3;
     border-radius: 8px;
-    padding: 25px 20px; /* 【修改】上下25px，左右20px（减少左右留白，给文字腾地方） */
+    padding: 30px; 
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100% !important; /* 确保盒子自己也撑开 */
+    box-sizing: border-box !important; /* 让padding算在宽度内，防止撑爆 */
   }
 
   /* 6. 表格样式 */
@@ -68,15 +77,13 @@ header:
     font-size: 18px !important;
   }
   .program-table td, .dates-table td {
-    padding: 10px 8px; /* 稍微减小表格单元格间距 */
+    padding: 12px 10px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
-  
-  /* 时间列和标签列的宽度微调，确保不浪费空间 */
-  .time-col { width: 150px; font-weight: bold; color: #555; }
-  .label-col { width: 240px; font-weight: bold; color: #333; }
+  .time-col { width: 160px; font-weight: bold; color: #555; }
+  .label-col { width: 260px; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
   /* 7. 头像和按钮 */
@@ -143,10 +150,14 @@ header:
 
   <h3>Prof. Biao Chen (IEEE Fellow)</h3>
   <p><strong>Syracuse University, USA</strong></p>
+
   <br>
+
   <h3>Prof. Divesh Aggarwal</h3>
   <p><strong>National University of Singapore</strong></p>
+
   <br>
+
   <h3>Prof. Chunming Tang</h3>
   <p><strong>Southwest Jiaotong University, China</strong></p>
 </div>

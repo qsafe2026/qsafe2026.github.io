@@ -13,7 +13,7 @@ header:
   h2, h3 { color: #0056b3 !important; }
   
   /* 强制内容区域变宽，占满屏幕的 90% */
-  .page__inner-wrap { max-width: 90% !important; }
+  .page__inner-wrap { max-width: 100% !important; }
   .page__content { max-width: 100% !important; }
   
   /* 调整板块之间的间距，让长页面呼吸感更好 */

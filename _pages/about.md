@@ -8,11 +8,11 @@ header:
   overlay_filter: 0.5
 ---
 
-## Workshop at IEEE ISIT 2026 (Guangzhou)
+<h2 style="color: #0056b3; text-align: center;">Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
 
 This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
 
-### Topics
+#<h2 style="color: #0056b3;">Topics</h2>
 We invite submissions on (but not limited to) the following topics:
 * Code-based cryptography (CBC) and decoding-based security assumptions
 * Lattice-based cryptography (LBC), including LWE/LWR and related constructions

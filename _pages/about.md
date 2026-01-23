@@ -76,6 +76,29 @@ header:
   }
 
 
+  /* === 新增：重要日期表格样式 === */
+  .dates-table {
+    width: 100%;
+    max-width: 800px; /* 限制一下最大宽度，防止太宽了不好看 */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 18px !important;
+  }
+  .dates-table td {
+    padding: 8px 10px; /* 让行与行之间稍微紧凑一点，比日程表紧凑 */
+    vertical-align: top;
+    border: none; /* 去掉边框，看起来更像列表而不是表格 */
+  }
+  .dates-table .label-col {
+    font-weight: bold; /* 左边的标题加粗 */
+    width: 260px;      /* 【关键】固定左边列的宽度，确保右边对齐 */
+    color: #333;
+  }
+  .dates-table .date-col {
+    color: red;        /* 右边的日期统一设为红色 */
+    font-weight: bold; /* 如果你想让日期也加粗，就留着这行 */
+  }
+
   
 </style>
 
@@ -100,11 +123,20 @@ We invite submissions on (but not limited to) the following topics:
 Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.
 
 <h3>Important Dates</h3>
-<ul>
-  <li><strong>Paper Submission:</strong> <span style="color: red;">April 7, 2026 (firm)</span></li>
-  <li><strong>Notification of Acceptance:</strong> <span style="color: red;">April 21, 2026</span></li>
-  <li><strong>Final Manuscript:</strong> <span style="color: red;">April 28, 2026</span></li>
-</ul>
+<table class="dates-table">
+  <tr>
+    <td class="label-col">Paper Submission:</td>
+    <td class="date-col">April 7, 2026 (firm)</td>
+  </tr>
+  <tr>
+    <td class="label-col">Notification of Acceptance:</td>
+    <td class="date-col">April 21, 2026</td>
+  </tr>
+  <tr>
+    <td class="label-col">Final Manuscript:</td>
+    <td class="date-col">April 28, 2026</td>
+  </tr>
+</table>
 
 <hr>
 

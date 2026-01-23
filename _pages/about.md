@@ -126,25 +126,72 @@ Submission will be handled via EDAS. The paper format follows the main ISIT conf
 <h2>Tentative Program</h2>
 
 <h3>Session I: Code-Based Cryptography (CBC)</h3>
-* **09:00 - 09:30** | Invited Talk (TBA)
-* **09:30 - 10:00** | Selected Contributors
-* **10:00 - 10:30** | Selected Contributors
-* **10:30 - 11:00** | Morning Tea Break
+<table class="program-table">
+  <tr>
+    <td class="time-col">09:00 - 09:30</td>
+    <td class="event-col">Invited Talk (TBA)</td>
+  </tr>
+  <tr>
+    <td class="time-col">09:30 - 10:00</td>
+    <td class="event-col">Selected Contributors</td>
+  </tr>
+  <tr>
+    <td class="time-col">10:00 - 10:30</td>
+    <td class="event-col">Selected Contributors</td>
+  </tr>
+  <tr>
+    <td class="time-col">10:30 - 11:00</td>
+    <td class="event-col">Morning Tea Break</td>
+  </tr>
+</table>
 
 <h3>Session II: Lattice-Based Cryptography (LBC)</h3>
-* **11:00 - 11:30** | Invited Talk (TBA)
-* **11:30 - 12:00** | Selected Contributors
-* **12:00 - 12:30** | Selected Contributors
-* **12:30 - 13:30** | Lunch Break
+<table class="program-table">
+  <tr>
+    <td class="time-col">11:00 - 11:30</td>
+    <td class="event-col">Invited Talk (TBA)</td>
+  </tr>
+  <tr>
+    <td class="time-col">11:30 - 12:00</td>
+    <td class="event-col">Selected Contributors</td>
+  </tr>
+  <tr>
+    <td class="time-col">12:00 - 12:30</td>
+    <td class="event-col">Selected Contributors</td>
+  </tr>
+  <tr>
+    <td class="time-col">12:30 - 13:30</td>
+    <td class="event-col">Lunch Break</td>
+  </tr>
+</table>
 
 <h3>Session III: Quantum Error Correction Codes (QECC)</h3>
-* **13:30 - 14:00** | Invited Talk (TBA)
-* **14:00 - 14:30** | Selected Contributors
-* **14:30 - 15:00** | Selected Contributors
-* **15:00 - 15:30** | Afternoon Tea Break
+<table class="program-table">
+  <tr>
+    <td class="time-col">13:30 - 14:00</td>
+    <td class="event-col">Invited Talk (TBA)</td>
+  </tr>
+  <tr>
+    <td class="time-col">14:00 - 14:30</td>
+    <td class="event-col">Selected Contributors</td>
+  </tr>
+  <tr>
+    <td class="time-col">14:30 - 15:00</td>
+    <td class="event-col">Selected Contributors</td>
+  </tr>
+  <tr>
+    <td class="time-col">15:00 - 15:30</td>
+    <td class="event-col">Afternoon Tea Break</td>
+  </tr>
+</table>
 
 <h3>Interactive Session</h3>
-* **15:30 - 16:30** | Panel Discussion
+<table class="program-table">
+  <tr>
+    <td class="time-col">15:30 - 16:30</td>
+    <td class="event-col">Panel Discussion</td>
+  </tr>
+</table>
 
 <hr>
 

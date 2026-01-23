@@ -3,7 +3,10 @@ permalink: /program/
 title: "Tentative Program"
 author_profile: false
 ---
-
+<style>
+  .page__title { color: #0056b3 !important; }
+  h2, h3 { color: #0056b3 !important; }
+</style>
 ### Session I: Code-Based Cryptography (CBC)
 * **09:00 - 09:30** | Invited Talk (TBA)
 * **09:30 - 10:00** | Selected Contributors

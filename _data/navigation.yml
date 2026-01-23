@@ -1,11 +1,11 @@
 main:
-  - title: "Home (Scope)"
-    url: /
-  - title: "Submission & Dates"
-    url: /submission/
-  - title: "Keynote Speakers"
-    url: /speakers/
+  - title: "Home"
+    url: /#home
+  - title: "Submission"
+    url: /#submission
+  - title: "Speakers"
+    url: /#speakers
   - title: "Program"
-    url: /program/
+    url: /#program
   - title: "Organizers"
-    url: /organizers/
+    url: /#organizers

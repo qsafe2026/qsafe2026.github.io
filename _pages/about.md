@@ -9,265 +9,234 @@ header:
 ---
 
 <style>
-  /* 标题颜色 */
-  h2, h3 { color: #0056b3 !important; }
-  
-  /* 强制内容区域变宽，占满屏幕的 90% */
-  .page__inner-wrap { max-width: 100% !important; }
-  .page__content { max-width: 100% !important; }
-  
-  /* 调整板块之间的间距，让长页面呼吸感更好 */
-  section { margin-bottom: 80px; padding-top: 20px; }
-  
-  /* 分割线样式 */
-  hr { margin: 60px 0; border: 0; border-top: 1px solid #eee; }
-  
-  /* 组织者头像样式复用 */
-  .organizer-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
-  .organizer-item { width: 30%; margin-bottom: 20px; }
-  .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }
-  .btn--info { margin-top: 10px; display: inline-block; }
-
-
-  /* === 全局字体放大设置 === */
-  
-  /* 1. 增大正文、列表、表格文字 */
-  body, p, li, td, th, div { 
-    font-size: 18px !important;  /* 默认一般是 16px，改大到 18px */
-    line-height: 1.7 !important; /* 增加行间距，防止字变大后挤在一起 */
-  }
-
-  /* 2. 增大二级标题 (如 Topics, Organizers) */
-  h2 { 
-    font-size: 28px !important; 
-    margin-top: 40px !important; /* 字体大了，上方间距也要适当拉大 */
-  }
-
-  /* 3. 增大三级标题 (如 Session I, 老师名字) */
-  h3 { 
-    font-size: 22px !important; 
-  }
-  
-  /* 4. 增大侧边栏/页脚的小字 (可选) */
-  .page__footer-copyright {
-    font-size: 16px !important;
-  }
-
-  
-  /* === 新增：日程表样式 === */
-  .program-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    font-size: 18px !important; /* 保持和你之前设置的大字体一致 */
-  }
-  .program-table td {
-    padding: 12px 10px;
-    border-bottom: 1px solid #eee; /*每一行下面的浅灰分割线*/
-    vertical-align: top;
-  }
-  .program-table .time-col {
-    width: 160px; /* 强制固定时间列的宽度 */
-    font-weight: bold;
-    color: #444;
-  }
-  .program-table .event-col {
-    /* 事件列自动占据剩余空间 */
-  }
-
-
-  /* === 新增：重要日期表格样式 === */
-  .dates-table {
-    width: 100%;
-    max-width: 800px; /* 限制一下最大宽度，防止太宽了不好看 */
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 18px !important;
-  }
-  .dates-table td {
-    padding: 8px 10px; /* 让行与行之间稍微紧凑一点，比日程表紧凑 */
-    vertical-align: top;
-    border: none; /* 去掉边框，看起来更像列表而不是表格 */
-  }
-  .dates-table .label-col {
-    font-weight: bold; /* 左边的标题加粗 */
-    width: 260px;      /* 【关键】固定左边列的宽度，确保右边对齐 */
-    color: #333;
-  }
-  .dates-table .date-col {
-    color: red;        /* 右边的日期统一设为红色 */
-    font-weight: bold; /* 如果你想让日期也加粗，就留着这行 */
-  }
-
-
-  /* === 新增：修改封面大图上的副标题样式 === */
-  /* .page__lead 就是控制那个 excerpt 文字的容器 */
-  .page__lead {
-    font-size: 28px !important;   /* 1. 设置大小：比主标题小，但要足够显眼 (主标题通常很大) */
-    font-weight: bold !important; /* 2. 加粗 */
-    text-align: center !important;/* 3. 居中 (通常默认已居中，加这个保险) */
-    line-height: 1.3 !important;  /* 稍微调整行高，防止太挤 */
-    margin-top: 10px !important;  /* 和主标题拉开一点点距离 */
-  }
-
-/* === 1. 引入 Google Fonts (Open Sans) === */
+  /* 1. 引入 Google Fonts (Open Sans) */
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-  /* === 2. 全局应用新字体 === */
-  body, h1, h2, h3, h4, h5, h6, p, li, td, th, div, a, span {
-    /* 优先使用 Open Sans，如果没有则使用系统默认的无衬线字体 */
+  /* 2. 全局字体设置 */
+  body, h1, h4, h5, h6, p, li, td, th, div, a, span {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
   }
-  
+
+  /* 3. 字体大小和颜色设置 */
+  body, p, li, td, th, div { 
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+  }
+  h2 { 
+    font-size: 28px !important; 
+    color: #0056b3 !important; /* 湛蓝色标题 */
+    margin-top: 0 !important; /* 去掉标题顶部的空隙，因为现在在盒子里了 */
+    margin-bottom: 20px !important;
+  }
+  h3 { 
+    font-size: 22px !important; 
+    color: #0056b3 !important;
+  }
+
+  /* 4. 强制内容铺宽 */
+  .page__inner-wrap { max-width: 95% !important; }
+  .page__content { max-width: 100% !important; }
+
+  /* === 5. 【核心修改】卡片盒子样式 === */
+  .section-box {
+    background-color: #f8fbff;    /* 极淡的蓝色背景 */
+    border: 1px solid #e1e4e8;    /* 浅灰色边框 */
+    border-left: 6px solid #0056b3; /* 左侧加粗的湛蓝色线条，呼应主题 */
+    border-radius: 8px;           /* 圆角 */
+    padding: 30px;                /* 内部留白 */
+    margin-bottom: 50px;          /* 盒子之间的间距 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* 轻微的投影，增加立体感 */
+  }
+
+  /* 6. 表格样式优化 */
+  .program-table, .dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px !important;
+  }
+  .program-table td, .dates-table td {
+    padding: 12px 10px;
+    border-bottom: 1px dashed #ddd; /* 虚线分割，更精致 */
+    vertical-align: top;
+  }
+  .program-table tr:last-child td, .dates-table tr:last-child td {
+    border-bottom: none;
+  }
+  .time-col { width: 160px; font-weight: bold; color: #555; }
+  .label-col { width: 260px; font-weight: bold; color: #333; }
+  .date-col { color: #d90000; font-weight: bold; } /* 日期深红色 */
+
+  /* 7. 组织者头像样式 */
+  .organizer-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
+  .organizer-item { width: 30%; margin-bottom: 20px; }
+  .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
+  .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
+
+  /* 8. 封面副标题样式 */
+  .page__lead {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    margin-top: 10px !important;
+  }
 </style>
 
 <div id="home"></div>
-<h2 style="text-align: center;">Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
+<h2 style="text-align: center; font-size: 32px !important; margin-bottom: 30px !important;">Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
 
+<div style="font-size: 19px; margin-bottom: 40px; text-align: justify;">
 This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
+</div>
 
-## Topics
-We invite submissions on (but not limited to) the following topics:
-* Code-based cryptography (CBC) and decoding-based security assumptions
-* Lattice-based cryptography (LBC), including LWE/LWR and related constructions
-* Quantum error correction codes (QECC), including stabilizer and CSS constructions
-* Information-theoretic security and coding-based approaches to quantum-safe communication
-* Decoding algorithms for post-quantum security and quantum reliability
-
-<hr>
+<div class="section-box">
+  ## Topics
+  We invite submissions on (but not limited to) the following topics:
+  * Code-based cryptography (CBC) and decoding-based security assumptions
+  * Lattice-based cryptography (LBC), including LWE/LWR and related constructions
+  * Quantum error correction codes (QECC), including stabilizer and CSS constructions
+  * Information-theoretic security and coding-based approaches to quantum-safe communication
+  * Decoding algorithms for post-quantum security and quantum reliability
+</div>
 
 <div id="submission"></div>
-<h2>Paper Submission and Dates</h2>
+<div class="section-box">
+  <h2>Paper Submission and Dates</h2>
+  
+  <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
 
-Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.
-
-<h3>Important Dates</h3>
-<table class="dates-table">
-  <tr>
-    <td class="label-col">Paper Submission:</td>
-    <td class="date-col">April 7, 2026 (firm)</td>
-  </tr>
-  <tr>
-    <td class="label-col">Notification of Acceptance:</td>
-    <td class="date-col">April 21, 2026</td>
-  </tr>
-  <tr>
-    <td class="label-col">Final Manuscript:</td>
-    <td class="date-col">April 28, 2026</td>
-  </tr>
-</table>
-
-<hr>
+  <h3>Important Dates</h3>
+  <table class="dates-table">
+    <tr>
+      <td class="label-col">Paper Submission:</td>
+      <td class="date-col">April 7, 2026 (firm)</td>
+    </tr>
+    <tr>
+      <td class="label-col">Notification of Acceptance:</td>
+      <td class="date-col">April 21, 2026</td>
+    </tr>
+    <tr>
+      <td class="label-col">Final Manuscript:</td>
+      <td class="date-col">April 28, 2026</td>
+    </tr>
+  </table>
+</div>
 
 <div id="speakers"></div>
-<h2>Keynote Speakers</h2>
+<div class="section-box">
+  <h2>Keynote Speakers</h2>
 
-<h3>Prof. Biao Chen (IEEE Fellow)</h3>
-**Syracuse University, USA**
+  <h3>Prof. Biao Chen (IEEE Fellow)</h3>
+  **Syracuse University, USA**
 
-<h3>Prof. Divesh Aggarwal</h3>
-**National University of Singapore**
+  <br>
 
-<h3>Prof. Chunming Tang</h3>
-**Southwest Jiaotong University, China**
+  <h3>Prof. Divesh Aggarwal</h3>
+  **National University of Singapore**
 
-<hr>
+  <br>
+
+  <h3>Prof. Chunming Tang</h3>
+  **Southwest Jiaotong University, China**
+</div>
 
 <div id="program"></div>
-<h2>Tentative Program</h2>
+<div class="section-box">
+  <h2>Tentative Program</h2>
 
-<h3>Session I: Code-Based Cryptography (CBC)</h3>
-<table class="program-table">
-  <tr>
-    <td class="time-col">09:00 - 09:30</td>
-    <td class="event-col">Invited Talk (TBA)</td>
-  </tr>
-  <tr>
-    <td class="time-col">09:30 - 10:00</td>
-    <td class="event-col">Selected Contributors</td>
-  </tr>
-  <tr>
-    <td class="time-col">10:00 - 10:30</td>
-    <td class="event-col">Selected Contributors</td>
-  </tr>
-  <tr>
-    <td class="time-col">10:30 - 11:00</td>
-    <td class="event-col">Morning Tea Break</td>
-  </tr>
-</table>
+  <h3>Session I: Code-Based Cryptography (CBC)</h3>
+  <table class="program-table">
+    <tr>
+      <td class="time-col">09:00 - 09:30</td>
+      <td class="event-col">Invited Talk (TBA)</td>
+    </tr>
+    <tr>
+      <td class="time-col">09:30 - 10:00</td>
+      <td class="event-col">Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">10:00 - 10:30</td>
+      <td class="event-col">Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">10:30 - 11:00</td>
+      <td class="event-col">Morning Tea Break</td>
+    </tr>
+  </table>
 
-<h3>Session II: Lattice-Based Cryptography (LBC)</h3>
-<table class="program-table">
-  <tr>
-    <td class="time-col">11:00 - 11:30</td>
-    <td class="event-col">Invited Talk (TBA)</td>
-  </tr>
-  <tr>
-    <td class="time-col">11:30 - 12:00</td>
-    <td class="event-col">Selected Contributors</td>
-  </tr>
-  <tr>
-    <td class="time-col">12:00 - 12:30</td>
-    <td class="event-col">Selected Contributors</td>
-  </tr>
-  <tr>
-    <td class="time-col">12:30 - 13:30</td>
-    <td class="event-col">Lunch Break</td>
-  </tr>
-</table>
+  <h3>Session II: Lattice-Based Cryptography (LBC)</h3>
+  <table class="program-table">
+    <tr>
+      <td class="time-col">11:00 - 11:30</td>
+      <td class="event-col">Invited Talk (TBA)</td>
+    </tr>
+    <tr>
+      <td class="time-col">11:30 - 12:00</td>
+      <td class="event-col">Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">12:00 - 12:30</td>
+      <td class="event-col">Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">12:30 - 13:30</td>
+      <td class="event-col">Lunch Break</td>
+    </tr>
+  </table>
 
-<h3>Session III: Quantum Error Correction Codes (QECC)</h3>
-<table class="program-table">
-  <tr>
-    <td class="time-col">13:30 - 14:00</td>
-    <td class="event-col">Invited Talk (TBA)</td>
-  </tr>
-  <tr>
-    <td class="time-col">14:00 - 14:30</td>
-    <td class="event-col">Selected Contributors</td>
-  </tr>
-  <tr>
-    <td class="time-col">14:30 - 15:00</td>
-    <td class="event-col">Selected Contributors</td>
-  </tr>
-  <tr>
-    <td class="time-col">15:00 - 15:30</td>
-    <td class="event-col">Afternoon Tea Break</td>
-  </tr>
-</table>
+  <h3>Session III: Quantum Error Correction Codes (QECC)</h3>
+  <table class="program-table">
+    <tr>
+      <td class="time-col">13:30 - 14:00</td>
+      <td class="event-col">Invited Talk (TBA)</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:00 - 14:30</td>
+      <td class="event-col">Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:30 - 15:00</td>
+      <td class="event-col">Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">15:00 - 15:30</td>
+      <td class="event-col">Afternoon Tea Break</td>
+    </tr>
+  </table>
 
-<h3>Interactive Session</h3>
-<table class="program-table">
-  <tr>
-    <td class="time-col">15:30 - 16:30</td>
-    <td class="event-col">Panel Discussion</td>
-  </tr>
-</table>
-
-<hr>
+  <h3>Interactive Session</h3>
+  <table class="program-table">
+    <tr>
+      <td class="time-col">15:30 - 16:30</td>
+      <td class="event-col">Panel Discussion</td>
+    </tr>
+  </table>
+</div>
 
 <div id="organizers"></div>
-<h2>Organizers</h2>
+<div class="section-box">
+  <h2>Organizers</h2>
 
-<div class="organizer-grid">
-  <div class="organizer-item">
-    <img src="/images/venkata.jpg" alt="Venkata Gandikota">
-    <h3>Venkata Gandikota</h3>
-    <p>Syracuse University, USA<br>Email: vsgandik@syr.edu</p>
-    <a href="https://sites.google.com/view/gvenkata/home" target="_blank" class="btn btn--info">Personal website</a>
-  </div>
+  <div class="organizer-grid">
+    <div class="organizer-item">
+      <img src="/images/venkata.jpg" alt="Venkata Gandikota">
+      <h3>Venkata Gandikota</h3>
+      <p>Syracuse University, USA<br>Email: vsgandik@syr.edu</p>
+      <a href="https://sites.google.com/view/gvenkata/home" target="_blank" class="btn btn--info">Personal website</a>
+    </div>
 
-  <div class="organizer-item">
-    <img src="/images/ling.jpg" alt="Ling Liu">
-    <h3>Ling Liu</h3>
-    <p>Xidian University, China<br>Email: liuling@xidian.edu.cn</p>
-    <a href="https://faculty.xidian.edu.cn/LIULING/en/index.htm" target="_blank" class="btn btn--info">Personal website</a>
-  </div>
+    <div class="organizer-item">
+      <img src="/images/ling.jpg" alt="Ling Liu">
+      <h3>Ling Liu</h3>
+      <p>Xidian University, China<br>Email: liuling@xidian.edu.cn</p>
+      <a href="https://faculty.xidian.edu.cn/LIULING/en/index.htm" target="_blank" class="btn btn--info">Personal website</a>
+    </div>
 
-  <div class="organizer-item">
-    <img src="/images/shanxiang.jpg" alt="Shanxiang Lyu">
-    <h3>Shanxiang Lyu</h3>
-    <p>Jinan University, China<br>Email: lsx07@jnu.edu.cn</p>
-    <a href="https://sites.google.com/view/shanx" target="_blank" class="btn btn--info">Personal website</a>
+    <div class="organizer-item">
+      <img src="/images/shanxiang.jpg" alt="Shanxiang Lyu">
+      <h3>Shanxiang Lyu</h3>
+      <p>Jinan University, China<br>Email: lsx07@jnu.edu.cn</p>
+      <a href="https://sites.google.com/view/shanx" target="_blank" class="btn btn--info">Personal website</a>
+    </div>
   </div>
 </div>

@@ -110,7 +110,7 @@ header:
   </div>
 </div>
 
-<div class="section-box">
+<div class="section-box" style="text-align: center;">
   <h2>Topics</h2>
   <p>We invite submissions on (but not limited to) the following topics:</p>
   <ul>
@@ -123,7 +123,7 @@ header:
 </div>
 
 <div id="submission"></div>
-<div class="section-box">
+<div class="section-box" style="text-align: center;">
   <h2>Paper Submission and Dates</h2>
   <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
   
@@ -145,7 +145,7 @@ header:
 </div>
 
 <div id="speakers"></div>
-<div class="section-box">
+<div class="section-box" style="text-align: center;">
   <h2>Keynote Speakers</h2>
 
   <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
@@ -159,7 +159,7 @@ header:
 </div>
 
 <div id="program"></div>
-<div class="section-box">
+<div class="section-box" style="text-align: center;">
   <h2>Tentative Program</h2>
 
   <h3>Session I: Code-Based Cryptography (CBC)</h3>

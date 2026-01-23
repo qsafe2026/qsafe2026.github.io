@@ -109,6 +109,15 @@ header:
     line-height: 1.3 !important;  /* 稍微调整行高，防止太挤 */
     margin-top: 10px !important;  /* 和主标题拉开一点点距离 */
   }
+
+/* === 1. 引入 Google Fonts (Open Sans) === */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+  /* === 2. 全局应用新字体 === */
+  body, h1, h2, h3, h4, h5, h6, p, li, td, th, div, a, span {
+    /* 优先使用 Open Sans，如果没有则使用系统默认的无衬线字体 */
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
+  }
   
 </style>
 

@@ -42,7 +42,7 @@ header:
   }
   .sidebar { display: none !important; width: 0 !important; }
   .page__inner-wrap {
-    width: 96% !important;      
+    width: 80% !important;      
     max-width: 100% !important; 
     margin: 0 auto !important;
     padding: 0 !important;

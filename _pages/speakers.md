@@ -3,6 +3,10 @@ permalink: /speakers/
 title: "Keynote Speakers"
 author_profile: false
 ---
+<style>
+  .page__title { color: #0056b3 !important; }
+  h2, h3 { color: #0056b3 !important; }
+</style>
 
 ## Keynote Speakers
 

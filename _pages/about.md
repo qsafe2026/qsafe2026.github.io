@@ -1,4 +1,14 @@
 ---
+<style>
+  /* 让网页正文里的所有二级标题（比如 Topics）变成湛蓝色 */
+  h2, h3 { color: #0056b3 !important; }
+  
+  /* 如果你想让大图上的白色大标题也变成蓝色（可能会看不清），请把下面这行的 /* 和 */ 删掉 */
+  /* .page__title { color: #0056b3 !important; } */
+  
+  /* 专门针对正文里手动写的标题 */
+  .custom-blue-title { color: #0056b3 !important; }
+</style>
 permalink: /
 title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
 excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)"

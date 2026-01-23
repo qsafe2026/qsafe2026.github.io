@@ -5,6 +5,10 @@ author_profile: false
 ---
 
 <style>
+  .page__title { color: #0056b3 !important; }
+  h2, h3 { color: #0056b3 !important; }
+</style>
+<style>
 .organizer-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
 .organizer-item { width: 30%; margin-bottom: 20px; }
 .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }

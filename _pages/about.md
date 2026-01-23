@@ -4,7 +4,7 @@ title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
 excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)"
 author_profile: false
 header:
-  overlay_image: "https://buzzbbb.github.io/images/headerbg.jpg"
+  overlay_image: "https://qsafe2026.github.io/images/headerbg.jpg"
   overlay_filter: 0.5
 ---
 

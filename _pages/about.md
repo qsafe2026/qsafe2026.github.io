@@ -18,7 +18,7 @@ header:
   }
   body, p, li, td, th, div { 
     font-size: 18px !important;
-    line-height: 1.7 !important;
+    line-height: 1.6 !important; /* 稍微调小行高，让内容更紧凑 */
   }
 
   /* 3. 标题样式 */
@@ -33,17 +33,30 @@ header:
     color: #0056b3 !important;
   }
 
-  /* 4. 页面宽度 */
-  .page__inner-wrap { max-width: 95% !important; }
-  .page__content { max-width: 100% !important; }
+  /* 4. 【关键修改】强制页面极度变宽 */
+  .page__inner-wrap { 
+    width: 99% !important;     /* 宽度拉到 99% */
+    max-width: 100% !important; 
+    margin: 0 auto !important;
+    padding-right: 0 !important;
+  }
+  .page__content { 
+    width: 100% !important; 
+    max-width: 100% !important; 
+  }
+  /* 修复可能的归档页限制 */
+  .archive { 
+    width: 100% !important; 
+    padding-right: 0 !important; 
+  }
 
-  /* 5. 卡片盒子样式 */
+  /* 5. 卡片盒子样式优化 */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
     border-left: 6px solid #0056b3;
     border-radius: 8px;
-    padding: 30px;
+    padding: 25px 20px; /* 【修改】上下25px，左右20px（减少左右留白，给文字腾地方） */
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
@@ -55,13 +68,15 @@ header:
     font-size: 18px !important;
   }
   .program-table td, .dates-table td {
-    padding: 12px 10px;
+    padding: 10px 8px; /* 稍微减小表格单元格间距 */
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
-  .time-col { width: 160px; font-weight: bold; color: #555; }
-  .label-col { width: 260px; font-weight: bold; color: #333; }
+  
+  /* 时间列和标签列的宽度微调，确保不浪费空间 */
+  .time-col { width: 150px; font-weight: bold; color: #555; }
+  .label-col { width: 240px; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
   /* 7. 头像和按钮 */
@@ -82,7 +97,7 @@ header:
 
 <div id="home"></div>
 <div class="section-box">
-  <h2 style="text-align: center;">About Workshop</h2>
+  <h2 style="text-align: center;">Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
   <div style="text-align: justify;">
     This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
   </div>

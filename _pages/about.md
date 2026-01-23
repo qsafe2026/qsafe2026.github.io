@@ -42,7 +42,7 @@ header:
   }
   .sidebar { display: none !important; width: 0 !important; }
   .page__inner-wrap {
-    width: 80% !important;      
+    width: 96% !important;      
     max-width: 100% !important; 
     margin: 0 auto !important;
     padding: 0 !important;
@@ -62,15 +62,14 @@ header:
     box-sizing: border-box !important; 
   }
 
-  /* 6. 表格样式 (修改：去掉width 100%，防止内容太散) */
+  /* 6. 表格样式 */
   .program-table, .dates-table {
-    /* width: 100%;  <-- 删掉了这行，防止强制拉太宽 */
-    min-width: 500px; /* 保证表格有一个最小宽度 */
+    min-width: 500px; /* 保证表格不至于缩得太小 */
     border-collapse: collapse;
     font-size: 18px !important;
   }
   .program-table td, .dates-table td {
-    padding: 12px 15px; /* 稍微增加一点内边距 */
+    padding: 12px 15px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
   }
@@ -97,16 +96,16 @@ header:
 </style>
 
 <div id="home"></div>
-<div class="section-box" style="text-align: center;">
-  <h2>Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
-  <div style="display: inline-block; text-align: justify; max-width: 90%;">
+<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
+  <h2 style="text-align: center;">Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
+  <div style="width: fit-content; max-width: 90%; text-align: justify;">
     This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
   </div>
 </div>
 
-<div class="section-box" style="text-align: center;">
+<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
   <h2>Topics</h2>
-  <div style="display: inline-block; text-align: left;">
+  <div style="width: fit-content; text-align: left;">
     <p>We invite submissions on (but not limited to) the following topics:</p>
     <ul>
       <li>Code-based cryptography (CBC) and decoding-based security assumptions</li>
@@ -119,10 +118,10 @@ header:
 </div>
 
 <div id="submission"></div>
-<div class="section-box" style="text-align: center;">
+<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
   <h2>Paper Submission and Dates</h2>
   
-  <div style="display: inline-block; text-align: left;">
+  <div style="width: fit-content; text-align: left;">
     <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
     
     <h3>Important Dates</h3>
@@ -144,10 +143,10 @@ header:
 </div>
 
 <div id="speakers"></div>
-<div class="section-box" style="text-align: center;">
+<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
   <h2>Keynote Speakers</h2>
 
-  <div style="display: inline-block; text-align: left;">
+  <div style="width: fit-content; text-align: left;">
     
     <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
     <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
@@ -162,10 +161,10 @@ header:
 </div>
 
 <div id="program"></div>
-<div class="section-box" style="text-align: center;">
+<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
   <h2>Tentative Program</h2>
 
-  <div style="display: inline-block; text-align: left;">
+  <div style="width: fit-content; text-align: left; max-width: 100%;">
     
     <h3>Session I: Code-Based Cryptography (CBC)</h3>
     <table class="program-table">

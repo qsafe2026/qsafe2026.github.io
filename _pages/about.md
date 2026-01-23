@@ -1,8 +1,11 @@
 ---
 permalink: /
-title: "Scope and Topics"
-excerpt: "Coding Theory for Post-Quantum Security and Quantum Reliability Workshop at IEEE ISIT 2026"
+title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
+excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)"
 author_profile: false
+header:
+  overlay_image: /images/header-bg.jpg
+  overlay_filter: 0.5
 ---
 
 ## Workshop at IEEE ISIT 2026 (Guangzhou)

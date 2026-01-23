@@ -27,6 +27,32 @@ header:
   .organizer-item { width: 30%; margin-bottom: 20px; }
   .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }
   .btn--info { margin-top: 10px; display: inline-block; }
+
+
+  /* === 全局字体放大设置 === */
+  
+  /* 1. 增大正文、列表、表格文字 */
+  body, p, li, td, th, div { 
+    font-size: 18px !important;  /* 默认一般是 16px，改大到 18px */
+    line-height: 1.7 !important; /* 增加行间距，防止字变大后挤在一起 */
+  }
+
+  /* 2. 增大二级标题 (如 Topics, Organizers) */
+  h2 { 
+    font-size: 28px !important; 
+    margin-top: 40px !important; /* 字体大了，上方间距也要适当拉大 */
+  }
+
+  /* 3. 增大三级标题 (如 Session I, 老师名字) */
+  h3 { 
+    font-size: 22px !important; 
+  }
+  
+  /* 4. 增大侧边栏/页脚的小字 (可选) */
+  .page__footer-copyright {
+    font-size: 16px !important;
+  }
+  
 </style>
 
 <div id="home"></div>

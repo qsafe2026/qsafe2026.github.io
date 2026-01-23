@@ -99,6 +99,16 @@ header:
     font-weight: bold; /* 如果你想让日期也加粗，就留着这行 */
   }
 
+
+  /* === 新增：修改封面大图上的副标题样式 === */
+  /* .page__lead 就是控制那个 excerpt 文字的容器 */
+  .page__lead {
+    font-size: 28px !important;   /* 1. 设置大小：比主标题小，但要足够显眼 (主标题通常很大) */
+    font-weight: bold !important; /* 2. 加粗 */
+    text-align: center !important;/* 3. 居中 (通常默认已居中，加这个保险) */
+    line-height: 1.3 !important;  /* 稍微调整行高，防止太挤 */
+    margin-top: 10px !important;  /* 和主标题拉开一点点距离 */
+  }
   
 </style>
 

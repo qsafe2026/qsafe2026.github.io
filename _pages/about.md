@@ -83,7 +83,7 @@ header:
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
   .time-col { width: 160px; font-weight: bold; color: #555; }
-  .label-col { width: 260px; font-weight: bold; color: #333; }
+  .label-col { width: 300px !important; white-space: nowrap !important;font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
   /* 7. 头像和按钮 */

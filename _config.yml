@@ -15,7 +15,7 @@ name                     : &name "QSAFE 2026" # <--- 修改：网页标签名
 description              : &description "QSAFE 2026" # <--- 修改：网站描述
 url                      : "https://qsafe2026.github.io" # <--- 【必填】请改成你的实际网址
 baseurl                  : "" 
-repository               : "Buzzbbb/Buzzbbb.github.io" # 
+repository               : "qsafe2026/qsafe2026.github.io" # 
 
 # Site Author - 侧边栏信息
 # 因为是会议网站，我们将原本的“个人简介”改成了“会议简介”

@@ -139,26 +139,7 @@ header:
   }
   
   /* 注意：如果你发现手机版菜单按钮也不见了，请把 .greedy-nav button 这一行删掉 */
-/* === 新增：调整封面图的高度 === */
-  .page__hero--overlay {
-    /* 1. 设置最小高度：数字越大，图片越高 */
-    min-height: 600px !important; 
-    
-    /* 2. 强制文字垂直居中：防止图片变高后，文字跑到了最上面 */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    
-    /* 3. 稍微调整一下原有内边距，防止太挤 */
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  /* 可选：如果你觉得现在的标题字号在在新封面里太小了，可以把下面这行也加上 */
-  .page__hero--overlay .page__title {
-    font-size: 4em !important; /* 默认通常是 3em左右，这里改大一点 */
-  }
+
   
 </style>
 

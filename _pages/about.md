@@ -130,6 +130,16 @@ header:
   details .program-table { margin: 0; width: 100%; }
   details td { padding: 15px 20px; }
 
+  /* === 新增：隐藏顶部的主题切换/搜索按钮 === */
+  .greedy-nav .theme-toggle, 
+  .greedy-nav button, 
+  #theme-toggle,
+  button[title="Toggle theme"] {
+    display: none !important; /* 强制隐藏 */
+  }
+  
+  /* 注意：如果你发现手机版菜单按钮也不见了，请把 .greedy-nav button 这一行删掉 */
+  
 </style>
 
 <div id="home"></div>

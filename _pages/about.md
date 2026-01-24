@@ -140,7 +140,18 @@ header:
   
   /* 注意：如果你发现手机版菜单按钮也不见了，请把 .greedy-nav button 这一行删掉 */
 
+  /* === 新增：暴力隐藏底部的 Sitemap 和 Follow 链接 === */
+  .page__footer-follow,
+  .social-icons {
+    display: none !important;
+  }
   
+  /* 确保只保留我们自定义的 Copyright 居中显示 */
+  .page__footer-copyright {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
 </style>
 
 <div id="home"></div>

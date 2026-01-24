@@ -4,7 +4,7 @@ title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
 excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)"
 author_profile: false
 header:
-  overlay_image: "https://qsafe2026.github.io/images/headerbg.jpg"
+  overlay_image: "/images/headerbg.jpg"
   overlay_filter: 0.5
 ---
 
@@ -33,7 +33,7 @@ header:
     color: #0056b3 !important;
   }
 
-  /* === 4. 暴力拓宽页面 === */
+  /* === 4. 暴力拓宽页面容器 (保持背景宽敞) === */
   #main, .page, .page__content, .archive {
     width: 100% !important;
     max-width: 100% !important;
@@ -42,14 +42,14 @@ header:
   }
   .sidebar { display: none !important; width: 0 !important; }
   .page__inner-wrap {
-    width: 96% !important;      
+    width: 98% !important;      
     max-width: 100% !important; 
     margin: 0 auto !important;
     padding: 0 !important;
     float: none !important;    
   }
 
-  /* 5. 卡片盒子样式 */
+  /* 5. 【关键修改】卡片盒子样式 (调整为 2/3 宽度) */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
@@ -58,13 +58,20 @@ header:
     padding: 30px; 
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    width: 100% !important; 
+    
+    /* 修改开始：宽度控制 */
+    width: 70% !important;       /* 占页面约 2/3 */
+    min-width: 800px !important; /* 保证最小宽度，防止在小屏幕太挤 */
+    margin-left: auto !important;  /* 自动居中 */
+    margin-right: auto !important; /* 自动居中 */
+    /* 修改结束 */
+    
     box-sizing: border-box !important; 
   }
 
   /* 6. 表格样式 */
   .program-table, .dates-table {
-    min-width: 500px; /* 保证表格不至于缩得太小 */
+    min-width: 500px;
     border-collapse: collapse;
     font-size: 18px !important;
   }
@@ -93,64 +100,36 @@ header:
     line-height: 1.3 !important;
     margin-top: 10px !important;
   }
-
-  /* === 新增：折叠面板样式 (Accordion) === */
+  
+  /* 9. 折叠面板样式 */
   details {
-    width: 100%;           /* 宽度占满容器 */
-    margin-bottom: 15px;   /* 每个折叠框之间的距离 */
-    border: 1px solid #e1e4e8; /* 浅灰色边框 */
-    border-radius: 6px;    /* 圆角 */
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
     background-color: #fff;
     overflow: hidden;
   }
-
   summary {
-    padding: 12px 20px;    /* 按钮内部的空间 */
-    cursor: pointer;       /* 鼠标放上去变成小手 */
+    padding: 12px 20px;
+    cursor: pointer;
     font-weight: bold;
-    font-size: 20px;       /* 字体大小模拟之前的 h3 */
-    color: #0056b3;        /* 湛蓝色文字 */
-    background-color: #f8fbff; /* 浅蓝色背景，呼应主题 */
-    list-style: none;      /* 隐藏默认的三角箭头(部分浏览器) */
+    font-size: 20px;
+    color: #0056b3;
+    background-color: #f8fbff;
+    list-style: none;
     outline: none;
     transition: background 0.2s;
+    text-align: left; /* 确保标题文字左对齐 */
   }
+  summary:hover { background-color: #eaf5ff; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; float: right; font-weight: bold; color: #0056b3; }
+  details[open] summary::after { content: '-'; }
+  details[open] summary { border-bottom: 1px solid #e1e4e8; }
+  details .program-table { margin: 0; width: 100%; }
+  details td { padding: 15px 20px; }
 
-  /* 鼠标悬停时的效果 */
-  summary:hover {
-    background-color: #eaf5ff;
-  }
-
-  /* 专门针对 Webkit 浏览器隐藏默认箭头 */
-  summary::-webkit-details-marker {
-    display: none;
-  }
-
-  /* 自定义一个小箭头 (可选，为了更好看) */
-  summary::after {
-    content: '+'; 
-    float: right; 
-    font-weight: bold;
-    color: #0056b3;
-  }
-  
-  /* 打开状态下，箭头变成减号 */
-  details[open] summary::after {
-    content: '-';
-  }
-  
-  details[open] summary {
-    border-bottom: 1px solid #e1e4e8; /* 展开时，标题和内容之间加条线 */
-  }
-
-  /* 修正折叠框里的表格样式 */
-  details .program-table {
-    margin: 0;
-    width: 100%;
-  }
-  details td {
-    padding: 15px 20px; /* 内容稍微宽松点 */
-  }
 </style>
 
 <div id="home"></div>
@@ -205,7 +184,6 @@ header:
   <h2>Keynote Speakers</h2>
 
   <div style="width: fit-content; text-align: left;">
-    
     <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
     <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
 
@@ -214,7 +192,6 @@ header:
 
     <h3 style="margin-bottom: 2px; margin-top: 20px;">Prof. Chunming Tang</h3>
     <p style="margin-top: 0;"><strong>Southwest Jiaotong University, China</strong></p>
-    
   </div>
 </div>
 

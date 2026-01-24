@@ -211,9 +211,11 @@ header:
 
 <div id="speakers"></div>
 <div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
-  <h2>Keynote Speakers</h2>
+  
+  <h2 style="text-align: center; margin-bottom: 5px !important;">Keynote Speakers</h2>
 
   <div style="width: fit-content; text-align: left;">
+    
     <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
     <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
 
@@ -222,6 +224,7 @@ header:
 
     <h3 style="margin-bottom: 2px; margin-top: 20px;">Prof. Chunming Tang</h3>
     <p style="margin-top: 0;"><strong>Southwest Jiaotong University, China</strong></p>
+    
   </div>
 </div>
 

@@ -93,6 +93,64 @@ header:
     line-height: 1.3 !important;
     margin-top: 10px !important;
   }
+
+  /* === 新增：折叠面板样式 (Accordion) === */
+  details {
+    width: 100%;           /* 宽度占满容器 */
+    margin-bottom: 15px;   /* 每个折叠框之间的距离 */
+    border: 1px solid #e1e4e8; /* 浅灰色边框 */
+    border-radius: 6px;    /* 圆角 */
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  summary {
+    padding: 12px 20px;    /* 按钮内部的空间 */
+    cursor: pointer;       /* 鼠标放上去变成小手 */
+    font-weight: bold;
+    font-size: 20px;       /* 字体大小模拟之前的 h3 */
+    color: #0056b3;        /* 湛蓝色文字 */
+    background-color: #f8fbff; /* 浅蓝色背景，呼应主题 */
+    list-style: none;      /* 隐藏默认的三角箭头(部分浏览器) */
+    outline: none;
+    transition: background 0.2s;
+  }
+
+  /* 鼠标悬停时的效果 */
+  summary:hover {
+    background-color: #eaf5ff;
+  }
+
+  /* 专门针对 Webkit 浏览器隐藏默认箭头 */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* 自定义一个小箭头 (可选，为了更好看) */
+  summary::after {
+    content: '+'; 
+    float: right; 
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+  /* 打开状态下，箭头变成减号 */
+  details[open] summary::after {
+    content: '-';
+  }
+  
+  details[open] summary {
+    border-bottom: 1px solid #e1e4e8; /* 展开时，标题和内容之间加条线 */
+  }
+
+  /* 修正折叠框里的表格样式 */
+  details .program-table {
+    margin: 0;
+    width: 100%;
+  }
+  details td {
+    padding: 15px 20px; /* 内容稍微宽松点 */
+  }
 </style>
 
 <div id="home"></div>
@@ -164,75 +222,83 @@ header:
 <div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
   <h2>Tentative Program</h2>
 
-  <div style="width: fit-content; text-align: left; max-width: 100%;">
+  <div style="width: 100%; max-width: 900px; text-align: left;">
     
-    <h3>Session I: Code-Based Cryptography (CBC)</h3>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">09:00 - 09:30</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">09:30 - 10:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">10:00 - 10:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">10:30 - 11:00</td>
-        <td class="event-col">Morning Tea Break</td>
-      </tr>
-    </table>
+    <details open>
+      <summary>Session I: Code-Based Cryptography (CBC)</summary>
+      <table class="program-table">
+        <tr>
+          <td class="time-col">09:00 - 09:30</td>
+          <td class="event-col">Invited Talk (TBA)</td>
+        </tr>
+        <tr>
+          <td class="time-col">09:30 - 10:00</td>
+          <td class="event-col">Selected Contributors</td>
+        </tr>
+        <tr>
+          <td class="time-col">10:00 - 10:30</td>
+          <td class="event-col">Selected Contributors</td>
+        </tr>
+        <tr>
+          <td class="time-col">10:30 - 11:00</td>
+          <td class="event-col">Morning Tea Break</td>
+        </tr>
+      </table>
+    </details>
 
-    <h3>Session II: Lattice-Based Cryptography (LBC)</h3>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">11:00 - 11:30</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">11:30 - 12:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">12:00 - 12:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">12:30 - 13:30</td>
-        <td class="event-col">Lunch Break</td>
-      </tr>
-    </table>
+    <details>
+      <summary>Session II: Lattice-Based Cryptography (LBC)</summary>
+      <table class="program-table">
+        <tr>
+          <td class="time-col">11:00 - 11:30</td>
+          <td class="event-col">Invited Talk (TBA)</td>
+        </tr>
+        <tr>
+          <td class="time-col">11:30 - 12:00</td>
+          <td class="event-col">Selected Contributors</td>
+        </tr>
+        <tr>
+          <td class="time-col">12:00 - 12:30</td>
+          <td class="event-col">Selected Contributors</td>
+        </tr>
+        <tr>
+          <td class="time-col">12:30 - 13:30</td>
+          <td class="event-col">Lunch Break</td>
+        </tr>
+      </table>
+    </details>
 
-    <h3>Session III: Quantum Error Correction Codes (QECC)</h3>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">13:30 - 14:00</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:00 - 14:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:30 - 15:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">15:00 - 15:30</td>
-        <td class="event-col">Afternoon Tea Break</td>
-      </tr>
-    </table>
+    <details>
+      <summary>Session III: Quantum Error Correction Codes (QECC)</summary>
+      <table class="program-table">
+        <tr>
+          <td class="time-col">13:30 - 14:00</td>
+          <td class="event-col">Invited Talk (TBA)</td>
+        </tr>
+        <tr>
+          <td class="time-col">14:00 - 14:30</td>
+          <td class="event-col">Selected Contributors</td>
+        </tr>
+        <tr>
+          <td class="time-col">14:30 - 15:00</td>
+          <td class="event-col">Selected Contributors</td>
+        </tr>
+        <tr>
+          <td class="time-col">15:00 - 15:30</td>
+          <td class="event-col">Afternoon Tea Break</td>
+        </tr>
+      </table>
+    </details>
 
-    <h3>Interactive Session</h3>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">15:30 - 16:30</td>
-        <td class="event-col">Panel Discussion</td>
-      </tr>
-    </table>
+    <details>
+      <summary>Interactive Session</summary>
+      <table class="program-table">
+        <tr>
+          <td class="time-col">15:30 - 16:30</td>
+          <td class="event-col">Panel Discussion</td>
+        </tr>
+      </table>
+    </details>
     
   </div>
 </div>

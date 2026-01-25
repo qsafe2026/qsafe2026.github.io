@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
-excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)"
+excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)<br><br><span class='workshop-date-icon'>📅 July 03 (Friday), 2026</span>"
 author_profile: false
 header:
   overlay_image: "https://qsafe2026.github.io/images/header-bg.jpg"
@@ -21,14 +21,14 @@ header:
     line-height: 1.6 !important;
   }
 
-  /* 3. 标题样式 (统一左对齐) */
+  /* 3. 标题样式 (左对齐) */
   h2 { 
-    font-size: 26px !important; /* 稍微调小一点，更秀气 */
+    font-size: 26px !important; 
     color: #0056b3 !important;
     margin-top: 0 !important;
     margin-bottom: 15px !important;
-    text-align: left !important; /* 【关键修改】强制左对齐 */
-    border-bottom: 1px solid #e1e4e8; /* 加一条细淡线，增加层次感 */
+    text-align: left !important; /* 强制左对齐 */
+    border-bottom: 1px solid #e1e4e8; 
     padding-bottom: 10px;
   }
   h3 { 
@@ -38,7 +38,7 @@ header:
     margin-bottom: 5px !important;
   }
 
-  /* === 4. 暴力拓宽页面 & 手机端修复 === */
+  /* 4. 暴力拓宽页面 */
   #main, .page, .page__content, .archive {
     width: 100% !important;
     max-width: 100% !important;
@@ -54,23 +54,26 @@ header:
     float: none !important;    
   }
 
-  /* 5. 卡片盒子样式 (方框居中，但内容左对齐) */
+  /* 5. 【关键修改】卡片盒子样式 */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
     border-left: 6px solid #0056b3;
     border-radius: 8px;
-    padding: 30px; 
+    
+    /* 修改点：加大左右内边距，让文字看起来更窄、更聚拢 */
+    padding: 40px 12% !important; 
+    
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     
-    /* 电脑端宽度控制 */
+    /* 盒子整体宽度保持 70% */
     width: 70% !important;       
     min-width: 800px !important; 
     margin-left: auto !important;  
     margin-right: auto !important; 
     
-    text-align: left !important; /* 【关键】盒子里的所有文字默认左对齐 */
+    text-align: left !important; 
     box-sizing: border-box !important; 
   }
 
@@ -79,13 +82,13 @@ header:
     min-width: 500px;
     border-collapse: collapse;
     font-size: 18px !important;
-    width: 100%; /* 表格宽度填满方框 */
+    width: 100%; 
   }
   .program-table td, .dates-table td {
     padding: 12px 15px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
-    text-align: left; /* 表格内容左对齐 */
+    text-align: left; 
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
   
@@ -93,24 +96,34 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. 头像样式 (保持居中，因为是网格布局) */
+  /* 7. 【关键修改】组织者样式 - 强制居中 */
   .organizer-grid { 
     display: flex; 
     justify-content: space-around; 
     flex-wrap: wrap; 
-    text-align: center; /* 头像下面的名字还是居中好看 */
+    text-align: center !important; /* 网格居中 */
   }
   .organizer-item { width: 30%; margin-bottom: 20px; }
   .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
+  
+  /* 强制组织者的文字居中 */
+  .organizer-item h3, .organizer-item p {
+    text-align: center !important;
+  }
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 封面样式 (Cover) */
+  /* 8. 【关键修改】封面标题样式 */
   .page__hero--overlay .page__title {
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
-    font-size: 2.8em !important; /* 【修改】字体调小了 (原来可能是 3.5em+) */
+    
+    /* 修改点：字体改小，原来是 2.8em，现在改成 2.2em，尽量一行显示 */
+    font-size: 2.2em !important; 
+    
     line-height: 1.2 !important;
+    max-width: 90% !important; /* 防止贴边 */
   }
+  
   .page__hero--overlay .page__lead {
     color: #fff !important; 
     text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
@@ -118,20 +131,16 @@ header:
     margin-bottom: 10px !important;
   }
 
-  /* 新增：日期行样式 */
-  .workshop-date {
-    color: #fff !important;
-    font-size: 1.3em !important;
-    font-weight: bold;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* 图标和文字的间距 */
-    margin-top: 15px;
+  /* 9. 日期图标样式 */
+  .workshop-date-icon {
+    font-size: 0.9em !important;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.4);
   }
   
-  /* 9. 折叠面板样式 */
+  /* 10. 折叠面板样式 */
   details {
     width: 100%;
     margin-bottom: 15px;
@@ -144,13 +153,13 @@ header:
     padding: 12px 20px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 18px; /* 稍微调小，与正文更协调 */
+    font-size: 18px; 
     color: #0056b3;
     background-color: #f8fbff;
     list-style: none;
     outline: none;
     transition: background 0.2s;
-    text-align: left; /* 折叠条标题左对齐 */
+    text-align: left; 
   }
   summary:hover { background-color: #eaf5ff; }
   summary::-webkit-details-marker { display: none; }
@@ -166,7 +175,7 @@ header:
       width: 92% !important;     
       min-width: 0 !important;   
       margin: 0 auto 30px auto !important; 
-      padding: 20px 15px !important; 
+      padding: 20px 15px !important; /* 手机上内边距稍微小一点 */
     }
     .section-box table, .program-table, .dates-table {
       display: block !important;    
@@ -187,12 +196,9 @@ header:
       left: 0 !important;
       right: 0 !important;
     }
-    /* 手机端字体再次微调 */
+    /* 手机端字体 */
     .page__hero--overlay .page__title {
-      font-size: 1.8em !important; /* 手机上更小一点，防止折行太难看 */
-    }
-    .workshop-date {
-      font-size: 1.1em !important;
+      font-size: 1.6em !important; 
     }
     
     body, html, .page, .page__inner-wrap, .page__content {
@@ -386,20 +392,3 @@ header:
     </div>
   </div>
 </div>
-
-<script>
-  // 这段代码会自动在封面标题下面插入日期
-  document.addEventListener("DOMContentLoaded", function() {
-    var heroTitle = document.querySelector('.page__hero--overlay .page__lead');
-    if(heroTitle) {
-      var dateDiv = document.createElement('div');
-      dateDiv.className = 'workshop-date';
-      // 这里是 SVG 图标 (日历)
-      dateDiv.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        <span>July 03 (Friday), 2026</span>
-      `;
-      heroTitle.parentNode.insertBefore(dateDiv, heroTitle.nextSibling);
-    }
-  });
-</script>

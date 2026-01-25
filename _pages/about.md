@@ -1,10 +1,10 @@
 ---
 permalink: /
 title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
-excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)<br><br><span class='workshop-date-icon'>📅 July 03 (Friday), 2026</span>"
+excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)<br><span class='workshop-date'>July 03 (Friday), 2026</span>"
 author_profile: false
 header:
-  overlay_image: "https://qsafe2026.github.io/images/header-bg.jpg"
+  overlay_image: "[/images/headerbg.jpg](https://qsafe2026.github.io/images/header-bg.jpg)"
   overlay_filter: 0.5
 ---
 
@@ -21,13 +21,13 @@ header:
     line-height: 1.6 !important;
   }
 
-  /* 3. 标题样式 (正文部分强制左对齐) */
+  /* 3. 正文标题样式 (左对齐) */
   h2 { 
     font-size: 26px !important; 
     color: #0056b3 !important;
     margin-top: 0 !important;
     margin-bottom: 15px !important;
-    text-align: left !important; /* 正文标题左对齐 */
+    text-align: left !important; 
     border-bottom: 1px solid #e1e4e8; 
     padding-bottom: 10px;
   }
@@ -54,20 +54,16 @@ header:
     float: none !important;    
   }
 
-  /* 5. 通用卡片盒子样式 (默认窄一点，内容收拢) */
+  /* 5. 卡片盒子样式 (所有盒子大小统一) */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
     border-left: 6px solid #0056b3;
     border-radius: 8px;
-    
-    /* 内容向中间收拢，左右留白较大 */
-    padding: 40px 12% !important; 
-    
+    padding: 40px 12% !important; /* 统一的内边距 */
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     
-    /* 默认宽度 70% */
     width: 70% !important;       
     min-width: 800px !important; 
     margin-left: auto !important;  
@@ -96,7 +92,7 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. Organizers 样式 (强制居中) */
+  /* 7. Organizers 样式 (强制居中 + 字体缩小) */
   .organizer-grid { 
     display: flex; 
     justify-content: space-around; 
@@ -105,42 +101,49 @@ header:
   }
   .organizer-item { width: 30%; margin-bottom: 20px; }
   .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
-  .organizer-item h3, .organizer-item p { text-align: center !important; }
+  .organizer-item h3 { text-align: center !important; margin-bottom: 5px !important; }
+  
+  /* 【关键修改】Organizers 详细信息字体改小 */
+  .organizer-item p { 
+    text-align: center !important; 
+    font-size: 0.85em !important; /* 缩小字体 (约15px) */
+    line-height: 1.4 !important;    /*行高紧凑一点 */
+    color: #444;
+  }
+  
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改】封面标题样式 */
-  .page__hero--overlay .page__title {
+  /* 8. 【关键修改】封面标题样式 (统一大小和粗细) */
+  /* 同时选中 大标题(.page__title) 和 小标题(.page__lead) */
+  .page__hero--overlay .page__title,
+  .page__hero--overlay .page__lead {
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
     
-    /* 修改点：进一步缩小字体，确保一行能放下 */
+    /* 统一设置为 1.7em 加粗 */
     font-size: 1.7em !important; 
+    font-weight: bold !important;
     
-    line-height: 1.2 !important;
-    width: 100% !important; /* 允许占满全宽 */
+    line-height: 1.3 !important;
+    width: 100% !important; 
     max-width: 100% !important; 
     padding: 0 20px !important;
-    text-align: center !important; /* 强制居中 */
+    text-align: center !important;
+    margin-bottom: 10px !important;
   }
   
-  /* 【关键修改】封面副标题 & 日期 居中 */
+  /* 小标题稍微把顶部间距拉小一点，让它紧跟大标题 */
   .page__hero--overlay .page__lead {
-    color: #fff !important; 
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
-    font-size: 1.5em !important;
-    margin-bottom: 10px !important;
-    text-align: center !important; /* 强制居中 */
-    width: 100% !important;
+    margin-top: 5px !important; 
   }
 
-  /* 9. 日期图标样式 */
-  .workshop-date-icon {
-    font-size: 0.9em !important;
-    background: rgba(0,0,0,0.3);
-    padding: 5px 15px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.4);
-    display: inline-block; /* 配合父级居中 */
+  /* 9. 【关键修改】日期样式 (无图标，字体小) */
+  .workshop-date {
+    font-size: 0.8em !important; /* 比标题小很多 */
+    font-weight: normal !important; /* 不加粗 */
+    color: rgba(255,255,255,0.9);
+    display: inline-block;
+    margin-top: 5px;
   }
   
   /* 10. 折叠面板样式 */
@@ -199,12 +202,10 @@ header:
       left: 0 !important;
       right: 0 !important;
     }
-    /* 手机端字体再次缩小，防止断行 */
-    .page__hero--overlay .page__title {
-      font-size: 1.3em !important; 
-    }
+    /* 手机端字体再次缩小 */
+    .page__hero--overlay .page__title,
     .page__hero--overlay .page__lead {
-      font-size: 1.1em !important;
+      font-size: 1.3em !important; 
     }
     
     body, html, .page, .page__inner-wrap, .page__content {
@@ -372,7 +373,7 @@ header:
 </div>
 
 <div id="organizers"></div>
-<div class="section-box" style="width: 90% !important; padding: 40px 5% !important;">
+<div class="section-box">
   <h2>Organizers</h2>
 
   <div class="organizer-grid">

@@ -112,9 +112,9 @@ header:
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改】封面标题样式 (拆分设置) */
+  /* 8. 【关键修改】封面标题样式 */
   
-  /* 公共属性：字体、颜色、阴影 */
+  /* 公共设置：字体、加粗、颜色、阴影、居中 */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
     font-family: 'Open Sans', sans-serif !important;
@@ -125,30 +125,29 @@ header:
     width: 100% !important; 
     max-width: 100% !important; 
     padding: 0 20px !important;
+    
+    /* 【关键修改】统一字号 */
+    font-size: 1.7em !important; 
+    line-height: 1.3 !important;
   }
 
   /* 8.1 大标题：不斜 */
   .page__hero--overlay .page__title {
-    font-size: 1.7em !important; 
-    line-height: 1.3 !important;
     margin-bottom: 10px !important;
-    /* 【修改】大标题只要加粗，不要斜体 */
     font-style: normal !important; 
   }
 
-  /* 8.2 小标题 (Workshop...)：要斜 */
+  /* 8.2 小标题：要斜 */
   .page__hero--overlay .page__lead {
     margin-top: 5px !important; 
-    /* 【修改】小标题保留斜体 */
     font-style: italic !important; 
   }
 
-  /* 9. 【关键修改】日期样式 (无斜体 + 白色方框) */
+  /* 9. 日期样式 (白色方框) */
   .workshop-date {
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 0.4em !important; /* 字体稍微调回0.6以便看清，配合框框正好 */
+    font-size: 0.6em !important; 
     
-    /* 要求：无斜体 */
     font-style: normal !important;
     font-weight: 600 !important; 
     
@@ -156,12 +155,11 @@ header:
     color: #fff;
     display: inline-block;
     
-    /* 要求：白色方框 */
     border: 2px solid #fff; 
-    padding: 8px 15px;     /* 内边距：上下8px，左右15px，撑开方框 */
-    border-radius: 4px;    /* 稍微加一点点圆角，看起来更高级（如果是直角改成0px）*/
-    margin-top: 15px;      /* 离标题远一点 */
-    background-color: rgba(0,0,0,0.1); /* 微微的半透明背景，增强文字清晰度 */
+    padding: 8px 15px;     
+    border-radius: 4px;    
+    margin-top: 15px;      
+    background-color: rgba(0,0,0,0.1); 
     text-transform: uppercase;
   }
   
@@ -224,203 +222,16 @@ header:
       padding-left: 15px !important;
       padding-right: 15px !important;
     }
+    /* 手机端也保持两者大小一致 (稍微小一点适配屏幕) */
     .page__hero--overlay .page__title,
     .page__hero--overlay .page__lead {
       font-size: 1.3em !important; 
     }
     .workshop-date {
         font-size: 0.5em !important;
-        padding: 5px 10px !important; /* 手机上框框稍微小一点 */
+        padding: 5px 10px !important; 
     }
     
     body, html, .page, .page__inner-wrap, .page__content {
       width: 100% !important;
-      max-width: 100% !important;
-      overflow-x: hidden !important; 
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-  }
-
-  /* 隐藏多余元素 */
-  .greedy-nav .theme-toggle, .greedy-nav button, #theme-toggle, button[title="Toggle theme"] { display: none !important; }
-  .page__footer-follow, .social-icons { display: none !important; }
-  .page__footer-copyright { display: block !important; margin: 0 auto !important; text-align: center !important; }
-  
-  /* 强制白天模式 */
-  @media (prefers-color-scheme: dark) {
-    body, .page, .page__content { background-color: #fff !important; color: #333 !important; }
-    h1, h2, h3, h4, h5, h6 { color: #0056b3 !important; }
-    a { color: #0056b3 !important; }
-    .section-box { background-color: #f8fbff !important; color: #333 !important; border: 1px solid #e1e4e8 !important; }
-    details, summary { background-color: #fff !important; color: #333 !important; }
-    summary { background-color: #f8fbff !important; }
-    .masthead { background-color: #fff !important; border-bottom: 1px solid #e1e4e8 !important; }
-  }
-</style>
-
-<div id="home"></div>
-
-<div class="section-box">
-  <h2>Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
-  <div style="text-align: justify;">
-    This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
-  </div>
-</div>
-
-<div class="section-box">
-  <h2>Topics</h2>
-  <p>We invite submissions on (but not limited to) the following topics:</p>
-  <ul>
-    <li>Code-based cryptography (CBC) and decoding-based security assumptions</li>
-    <li>Lattice-based cryptography (LBC), including LWE/LWR and related constructions</li>
-    <li>Quantum error correction codes (QECC), including stabilizer and CSS constructions</li>
-    <li>Information-theoretic security and coding-based approaches to quantum-safe communication</li>
-    <li>Decoding algorithms for post-quantum security and quantum reliability</li>
-  </ul>
-</div>
-
-<div id="submission"></div>
-<div class="section-box">
-  <h2>Paper Submission and Dates</h2>
-  <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
-  
-  <h3>Important Dates</h3>
-  <table class="dates-table">
-    <tr>
-      <td class="label-col">Paper Submission:</td>
-      <td class="date-col">April 7, 2026 (firm)</td>
-    </tr>
-    <tr>
-      <td class="label-col">Notification of Acceptance:</td>
-      <td class="date-col">April 21, 2026</td>
-    </tr>
-    <tr>
-      <td class="label-col">Final Manuscript:</td>
-      <td class="date-col">April 28, 2026</td>
-    </tr>
-  </table>
-</div>
-
-<div id="speakers"></div>
-<div class="section-box">
-  <h2>Keynote Speakers</h2>
-
-  <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
-  <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
-
-  <h3 style="margin-bottom: 2px; margin-top: 25px;">Prof. Divesh Aggarwal</h3>
-  <p style="margin-top: 0;"><strong>National University of Singapore</strong></p>
-
-  <h3 style="margin-bottom: 2px; margin-top: 25px;">Prof. Chunming Tang</h3>
-  <p style="margin-top: 0;"><strong>Southwest Jiaotong University, China</strong></p>
-</div>
-
-<div id="program"></div>
-<div class="section-box">
-  <h2>Tentative Program</h2>
-
-  <details open>
-    <summary>Session I: Code-Based Cryptography (CBC)</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">09:00 - 09:30</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">09:30 - 10:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">10:00 - 10:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">10:30 - 11:00</td>
-        <td class="event-col">Morning Tea Break</td>
-      </tr>
-    </table>
-  </details>
-
-  <details>
-    <summary>Session II: Lattice-Based Cryptography (LBC)</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">11:00 - 11:30</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">11:30 - 12:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">12:00 - 12:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">12:30 - 13:30</td>
-        <td class="event-col">Lunch Break</td>
-      </tr>
-    </table>
-  </details>
-
-  <details>
-    <summary>Session III: Quantum Error Correction Codes (QECC)</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">13:30 - 14:00</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:00 - 14:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:30 - 15:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">15:00 - 15:30</td>
-        <td class="event-col">Afternoon Tea Break</td>
-      </tr>
-    </table>
-  </details>
-
-  <details>
-    <summary>Interactive Session</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">15:30 - 16:30</td>
-        <td class="event-col">Panel Discussion</td>
-      </tr>
-    </table>
-  </details>
-</div>
-
-<div id="organizers"></div>
-<div class="section-box">
-  <h2>Organizers</h2>
-
-  <div class="organizer-grid">
-    <div class="organizer-item">
-      <img src="/images/venkata.jpg" alt="Venkata Gandikota">
-      <h3>Venkata Gandikota</h3>
-      <p>Syracuse University, USA<br>Email: vsgandik@syr.edu</p>
-      <a href="https://sites.google.com/view/gvenkata/home" target="_blank" class="btn btn--info">Personal website</a>
-    </div>
-
-    <div class="organizer-item">
-      <img src="/images/ling.jpg" alt="Ling Liu">
-      <h3>Ling Liu</h3>
-      <p>Xidian University, China<br>Email: liuling@xidian.edu.cn</p>
-      <a href="https://faculty.xidian.edu.cn/LIULING/en/index.htm" target="_blank" class="btn btn--info">Personal website</a>
-    </div>
-
-    <div class="organizer-item">
-      <img src="/images/shanxiang.jpg" alt="Shanxiang Lyu">
-      <h3>Shanxiang Lyu</h3>
-      <p>Jinan University, China<br>Email: lsx07@jnu.edu.cn</p>
-      <a href="https://sites.google.com/view/shanx" target="_blank" class="btn btn--info">Personal website</a>
-    </div>
-  </div>
-</div>
+      max-width: 100% !

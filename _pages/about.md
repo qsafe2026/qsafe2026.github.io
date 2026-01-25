@@ -21,13 +21,13 @@ header:
     line-height: 1.6 !important;
   }
 
-  /* 3. 标题样式 (左对齐) */
+  /* 3. 标题样式 (正文部分强制左对齐) */
   h2 { 
     font-size: 26px !important; 
     color: #0056b3 !important;
     margin-top: 0 !important;
     margin-bottom: 15px !important;
-    text-align: left !important; /* 强制左对齐 */
+    text-align: left !important; /* 正文标题左对齐 */
     border-bottom: 1px solid #e1e4e8; 
     padding-bottom: 10px;
   }
@@ -38,7 +38,7 @@ header:
     margin-bottom: 5px !important;
   }
 
-  /* 4. 暴力拓宽页面 */
+  /* 4. 页面容器设置 */
   #main, .page, .page__content, .archive {
     width: 100% !important;
     max-width: 100% !important;
@@ -54,20 +54,20 @@ header:
     float: none !important;    
   }
 
-  /* 5. 【关键修改】卡片盒子样式 */
+  /* 5. 通用卡片盒子样式 (默认窄一点，内容收拢) */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
     border-left: 6px solid #0056b3;
     border-radius: 8px;
     
-    /* 修改点：加大左右内边距，让文字看起来更窄、更聚拢 */
+    /* 内容向中间收拢，左右留白较大 */
     padding: 40px 12% !important; 
     
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     
-    /* 盒子整体宽度保持 70% */
+    /* 默认宽度 70% */
     width: 70% !important;       
     min-width: 800px !important; 
     margin-left: auto !important;  
@@ -96,20 +96,16 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. 【关键修改】组织者样式 - 强制居中 */
+  /* 7. Organizers 样式 (强制居中) */
   .organizer-grid { 
     display: flex; 
     justify-content: space-around; 
     flex-wrap: wrap; 
-    text-align: center !important; /* 网格居中 */
+    text-align: center !important; 
   }
   .organizer-item { width: 30%; margin-bottom: 20px; }
   .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
-  
-  /* 强制组织者的文字居中 */
-  .organizer-item h3, .organizer-item p {
-    text-align: center !important;
-  }
+  .organizer-item h3, .organizer-item p { text-align: center !important; }
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
   /* 8. 【关键修改】封面标题样式 */
@@ -117,18 +113,24 @@ header:
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
     
-    /* 修改点：字体改小，原来是 2.8em，现在改成 2.2em，尽量一行显示 */
-    font-size: 2.2em !important; 
+    /* 修改点：进一步缩小字体，确保一行能放下 */
+    font-size: 1.7em !important; 
     
     line-height: 1.2 !important;
-    max-width: 90% !important; /* 防止贴边 */
+    width: 100% !important; /* 允许占满全宽 */
+    max-width: 100% !important; 
+    padding: 0 20px !important;
+    text-align: center !important; /* 强制居中 */
   }
   
+  /* 【关键修改】封面副标题 & 日期 居中 */
   .page__hero--overlay .page__lead {
     color: #fff !important; 
     text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
     font-size: 1.5em !important;
     margin-bottom: 10px !important;
+    text-align: center !important; /* 强制居中 */
+    width: 100% !important;
   }
 
   /* 9. 日期图标样式 */
@@ -138,6 +140,7 @@ header:
     padding: 5px 15px;
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.4);
+    display: inline-block; /* 配合父级居中 */
   }
   
   /* 10. 折叠面板样式 */
@@ -175,7 +178,7 @@ header:
       width: 92% !important;     
       min-width: 0 !important;   
       margin: 0 auto 30px auto !important; 
-      padding: 20px 15px !important; /* 手机上内边距稍微小一点 */
+      padding: 20px 15px !important; 
     }
     .section-box table, .program-table, .dates-table {
       display: block !important;    
@@ -196,9 +199,12 @@ header:
       left: 0 !important;
       right: 0 !important;
     }
-    /* 手机端字体 */
+    /* 手机端字体再次缩小，防止断行 */
     .page__hero--overlay .page__title {
-      font-size: 1.6em !important; 
+      font-size: 1.3em !important; 
+    }
+    .page__hero--overlay .page__lead {
+      font-size: 1.1em !important;
     }
     
     body, html, .page, .page__inner-wrap, .page__content {
@@ -366,7 +372,7 @@ header:
 </div>
 
 <div id="organizers"></div>
-<div class="section-box">
+<div class="section-box" style="width: 90% !important; padding: 40px 5% !important;">
   <h2>Organizers</h2>
 
   <div class="organizer-grid">

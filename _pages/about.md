@@ -112,33 +112,41 @@ header:
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改】封面标题样式 (斜体) */
+  /* 8. 【关键修改】封面标题样式 (拆分设置) */
+  
+  /* 公共属性：字体、颜色、阴影 */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
     font-family: 'Open Sans', sans-serif !important;
     font-weight: 800 !important; 
-    
-    /* 要求：改为斜体 */
-    font-style: italic !important;
-    
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
-    font-size: 1.7em !important; 
-    line-height: 1.3 !important;
+    text-align: center !important;
     width: 100% !important; 
     max-width: 100% !important; 
     padding: 0 20px !important;
-    text-align: center !important;
-    margin-bottom: 10px !important;
   }
+
+  /* 8.1 大标题：不斜 */
+  .page__hero--overlay .page__title {
+    font-size: 1.7em !important; 
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+    /* 【修改】大标题只要加粗，不要斜体 */
+    font-style: normal !important; 
+  }
+
+  /* 8.2 小标题 (Workshop...)：要斜 */
   .page__hero--overlay .page__lead {
     margin-top: 5px !important; 
+    /* 【修改】小标题保留斜体 */
+    font-style: italic !important; 
   }
 
   /* 9. 【关键修改】日期样式 (无斜体 + 白色方框) */
   .workshop-date {
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 0.6em !important; /* 字体稍微调回0.6以便看清，配合框框正好 */
+    font-size: 0.4em !important; /* 字体稍微调回0.6以便看清，配合框框正好 */
     
     /* 要求：无斜体 */
     font-style: normal !important;

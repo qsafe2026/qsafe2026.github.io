@@ -4,7 +4,7 @@ title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
 excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)<br><span class='workshop-date'>July 03 (Friday), 2026</span>"
 author_profile: false
 header:
-  overlay_image: "[/images/headerbg.jpg](https://qsafe2026.github.io/images/header-bg.jpg)"
+  overlay_image: "https://qsafe2026.github.io/images/header-bg.jpg"
   overlay_filter: 0.5
 ---
 
@@ -237,7 +237,7 @@ header:
 <div id="home"></div>
 
 <div class="section-box">
-  <h2>Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
+  <h2>Scope</h2>
   <div style="text-align: justify;">
     This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
   </div>

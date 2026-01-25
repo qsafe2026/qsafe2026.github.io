@@ -139,7 +139,7 @@ header:
 
   /* 9. 【关键修改】日期样式 (无图标，字体小) */
   .workshop-date {
-    font-size: 0.8em !important; /* 比标题小很多 */
+    font-size: 0.4em !important; /* 比标题小很多 */
     font-weight: normal !important; /* 不加粗 */
     color: rgba(255,255,255,0.9);
     display: inline-block;

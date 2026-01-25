@@ -1,18 +1,22 @@
 ---
 permalink: /
 title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
+# 【关键修改1】日期的 HTML 结构没变，但后面 CSS 会给它换新字体
 excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)<br><span class='workshop-date'>July 03 (Friday), 2026</span>"
 author_profile: false
 header:
   overlay_image: "https://qsafe2026.github.io/images/header-bg.jpg"
-  overlay_filter: 0.5
+  # 【关键修改2】蒙版亮度调整
+  # 原来是 0.5 (比较暗)，现在改成 0.15 (非常亮，只有一点点阴影)
+  overlay_filter: 0.15
 ---
 
 <style>
-  /* 1. 引入 Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+  /* 【关键修改3】引入新的艺术字体 Merriweather */
+  /* 我们在原来的 URL 后面追加了 &family=Merriweather... */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-  /* 2. 全局设置 */
+  /* 2. 全局设置 (正文继续用 Open Sans) */
   body, h1, h4, h5, h6, p, li, td, th, div, a, span {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
   }
@@ -54,13 +58,13 @@ header:
     float: none !important;    
   }
 
-  /* 5. 卡片盒子样式 (所有盒子大小统一) */
+  /* 5. 卡片盒子样式 */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
     border-left: 6px solid #0056b3;
     border-radius: 8px;
-    padding: 40px 12% !important; /* 统一的内边距 */
+    padding: 40px 12% !important; 
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     
@@ -92,7 +96,7 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. Organizers 样式 (强制居中 + 字体缩小) */
+  /* 7. Organizers 样式 */
   .organizer-grid { 
     display: flex; 
     justify-content: space-around; 
@@ -103,27 +107,22 @@ header:
   .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
   .organizer-item h3 { text-align: center !important; margin-bottom: 5px !important; }
   
-  /* 【关键修改】Organizers 详细信息字体改小 */
   .organizer-item p { 
     text-align: center !important; 
-    font-size: 0.85em !important; /* 缩小字体 (约15px) */
-    line-height: 1.4 !important;    /*行高紧凑一点 */
+    font-size: 0.85em !important; 
+    line-height: 1.4 !important;    
     color: #444;
   }
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改】封面标题样式 (统一大小和粗细) */
-  /* 同时选中 大标题(.page__title) 和 小标题(.page__lead) */
+  /* 8. 封面标题样式 */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
-    
-    /* 统一设置为 1.7em 加粗 */
     font-size: 1.7em !important; 
     font-weight: bold !important;
-    
     line-height: 1.3 !important;
     width: 100% !important; 
     max-width: 100% !important; 
@@ -131,19 +130,24 @@ header:
     text-align: center !important;
     margin-bottom: 10px !important;
   }
-  
-  /* 小标题稍微把顶部间距拉小一点，让它紧跟大标题 */
   .page__hero--overlay .page__lead {
     margin-top: 5px !important; 
   }
 
-  /* 9. 【关键修改】日期样式 (无图标，字体小) */
+  /* 9. 【关键修改4】日期样式美化 */
   .workshop-date {
-    font-size: 0.4em !important; /* 比标题小很多 */
-    font-weight: normal !important; /* 不加粗 */
-    color: rgba(255,255,255,0.9);
+    /* 使用新引入的 Merriweather 衬线字体 */
+    font-family: 'Merriweather', serif !important; 
+    /* 稍微加大一点点字号，因为衬线体通常看起来比无衬线体小 */
+    font-size: 0.7em !important; 
+    /* 加一点点字间距，显得更优雅 */
+    letter-spacing: 0.5px !important;
+    
+    font-weight: normal !important; 
+    /* 颜色稍微调亮一点点 */
+    color: rgba(255,255,255,0.95);
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 8px; /* 稍微增加一点顶部间距 */
   }
   
   /* 10. 折叠面板样式 */
@@ -237,7 +241,7 @@ header:
 <div id="home"></div>
 
 <div class="section-box">
-  <h2>Scope</h2>
+  <h2>Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
   <div style="text-align: justify;">
     This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
   </div>

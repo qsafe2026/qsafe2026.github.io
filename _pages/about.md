@@ -193,6 +193,33 @@ header:
       border-bottom: 1px solid #e1e4e8 !important;
     }
   }
+
+  /* === 新增：专门修复手机端封面显示 === */
+  @media screen and (max-width: 768px) {
+    .page__hero--overlay {
+      /* 1. 强制高度为屏幕高度的 75% */
+      /* 你可以改成 80vh 或 100vh (全屏)，数字越大越高 */
+      min-height: 75vh !important; 
+      
+      /* 2. 确保图片居中剪裁，不会只显示左上角 */
+      background-position: center center !important;
+      
+      /* 3. 确保图片覆盖整个区域 */
+      background-size: cover !important;
+    }
+    
+    /* 4. 手机上标题字太大了会换行很难看，这里稍微改小一点 */
+    .page__hero--overlay .page__title {
+      font-size: 2.2em !important;
+      padding: 0 20px !important; /* 防止文字贴着屏幕边缘 */
+    }
+    
+    /* 5. 修复副标题在手机上的大小 */
+    .page__lead {
+      font-size: 1.2em !important;
+      padding: 0 10px !important;
+    }
+  }
 </style>
 
 <div id="home"></div>

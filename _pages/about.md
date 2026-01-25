@@ -220,6 +220,20 @@ header:
       padding: 0 10px !important;
     }
   }
+  /* === 新增：修复封面大标题颜色 === */
+  /* 特指：只修改封面图(overlay)上面的标题 */
+  .page__hero--overlay .page__title {
+    color: #fff !important; /* 强制白色 */
+    
+    /* 建议加一点文字阴影，防止背景图太亮时看不清文字 */
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
+  }
+
+  /* 如果封面上的副标题（Workshop...）也变蓝了，把下面这几行也加上 */
+  .page__hero--overlay .page__lead {
+    color: #fff !important; 
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
+  }
 </style>
 
 <div id="home"></div>

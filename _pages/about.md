@@ -197,46 +197,48 @@ header:
   /* === 新增：专门修复手机端封面显示 (终极修正版) === */
   @media screen and (max-width: 768px) {
     
-    /* 1. 针对 wrapper 的修复：确保容器本身就是全宽的 */
-    .initial-content, 
-    .page__hero--overlay,
-    .page__hero {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+    /* 1. 解除 800px 的宽度锁定 */
+    /* 这是最关键的一步！告诉方框在手机上只要占屏幕的 92% 就够了 */
+    .section-box {
+      width: 92% !important;     
+      min-width: 0 !important;   /* 【核心】取消最小宽度限制 */
+      margin: 0 auto 30px auto !important; /* 保持居中 */
+      padding: 20px 15px !important; /* 手机上内边距稍微小一点，省空间 */
     }
 
-    /* 2. 针对背景图的修复 */
+    /* 2. 修复表格撑大页面 */
+    /* 如果表格内容太长，让它在方框内部左右滑动，而不是撑爆整个网页 */
+    .section-box table, 
+    .program-table, 
+    .dates-table {
+      display: block !important;    /* 变成块级元素 */
+      width: 100% !important;       /* 宽度强制跟随父容器 */
+      min-width: 0 !important;      /* 取消表格的最小宽度限制 */
+      overflow-x: auto !important;  /* 【关键】如果内容太长，显示横向滚动条 */
+      -webkit-overflow-scrolling: touch; /* 让滚动更丝滑 */
+    }
+
+    /* 3. 修复封面图 (Background) 再次确保全屏铺满 */
     .page__hero--overlay {
-      /* 【核心关键点】手机上必须用 scroll，绝对不能用 fixed！*/
-      /* fixed 会导致图片在手机上定位错乱，看起来像只有一半 */
-      background-attachment: scroll !important; 
-      
-      /* 强制居中剪裁 */
+      width: 100vw !important; /* 强制宽度为视口宽度的 100% */
+      max-width: 100vw !important;
+      background-size: cover !important; /* 强制铺满 */
       background-position: center center !important;
-      background-size: cover !important;
-      
-      /* 设置合理的高度，太高了手机滑不动 */
-      min-height: 60vh !important; 
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important; /* 手机必须用 scroll */
+      min-height: 70vh !important; /* 高度给足 */
+      margin: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
     }
     
-    /* 3. 修复标题文字大小和边距 */
-    .page__hero--overlay .page__title {
-      font-size: 2.0em !important; /* 稍微改小一点，防止换行太难看 */
-      line-height: 1.2 !important;
-      padding: 0 15px !important;    /* 左右留点缝隙 */
-      width: 100% !important;        /* 确保文字容器也是全宽 */
-      box-sizing: border-box !important;
-    }
-    
-    /* 4. 修复副标题 */
-    .page__lead {
-      font-size: 1.1em !important;
-      padding: 0 15px !important;
+    /* 4. 确保所有外层容器都没有奇怪的边距 */
+    body, html, .page, .page__inner-wrap, .page__content {
       width: 100% !important;
-      box-sizing: border-box !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important; /* 禁止整个网页出现横向滚动条 */
+      margin: 0 !important;
+      padding: 0 !important;
     }
   }
   

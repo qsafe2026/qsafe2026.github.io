@@ -1,20 +1,16 @@
 ---
 permalink: /
 title: "Coding Theory for Post-Quantum Security and Quantum Reliability"
-# 【关键修改1】日期的 HTML 结构没变，但后面 CSS 会给它换新字体
 excerpt: "Workshop at IEEE ISIT 2026 (Guangzhou)<br><span class='workshop-date'>July 03 (Friday), 2026</span>"
 author_profile: false
 header:
   overlay_image: "https://qsafe2026.github.io/images/header-bg.jpg"
-  # 【关键修改2】蒙版亮度调整
-  # 原来是 0.5 (比较暗)，现在改成 0.15 (非常亮，只有一点点阴影)
-  overlay_filter: 0.15
+  overlay_filter: 0.3
 ---
 
 <style>
-  /* 【关键修改3】引入新的艺术字体 Merriweather */
-  /* 我们在原来的 URL 后面追加了 &family=Merriweather... */
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+  /* 【关键修改1】引入新的、更好看的艺术字体 Playfair Display (包含粗体和斜体样式) */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
   /* 2. 全局设置 (正文继续用 Open Sans) */
   body, h1, h4, h5, h6, p, li, td, th, div, a, span {
@@ -116,13 +112,21 @@ header:
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 封面标题样式 */
+  /* 8. 【关键修改2】封面标题样式重塑 */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
+    /* 应用新字体 Playfair Display */
+    font-family: 'Playfair Display', serif !important;
+    
+    /* 要求：加粗 (700) */
+    font-weight: 700 !important; 
+    
+    /* 要求：斜体 (italic) */
+    font-style: italic !important;
+    
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
     font-size: 1.7em !important; 
-    font-weight: bold !important;
     line-height: 1.3 !important;
     width: 100% !important; 
     max-width: 100% !important; 
@@ -134,20 +138,20 @@ header:
     margin-top: 5px !important; 
   }
 
-  /* 9. 【关键修改4】日期样式美化 */
+  /* 9. 【关键修改3】日期样式 (新字体、0.5大小) */
   .workshop-date {
-    /* 使用新引入的 Merriweather 衬线字体 */
-    font-family: 'Merriweather', serif !important; 
-    /* 稍微加大一点点字号，因为衬线体通常看起来比无衬线体小 */
-    font-size: 0.7em !important; 
-    /* 加一点点字间距，显得更优雅 */
-    letter-spacing: 0.5px !important;
+    /* 应用新字体 */
+    font-family: 'Playfair Display', serif !important;
+    
+    /* 要求：大小改为 0.5em (非常小) */
+    font-size: 0.5em !important; 
     
     font-weight: normal !important; 
-    /* 颜色稍微调亮一点点 */
+    /* 稍微加一点字间距提高可读性 */
+    letter-spacing: 1px !important;
     color: rgba(255,255,255,0.95);
     display: inline-block;
-    margin-top: 8px; /* 稍微增加一点顶部间距 */
+    margin-top: 8px;
   }
   
   /* 10. 折叠面板样式 */
@@ -194,6 +198,8 @@ header:
       overflow-x: auto !important;  
       -webkit-overflow-scrolling: touch; 
     }
+    
+    /* 【关键修改4】修复封面拉伸模糊问题 */
     .page__hero--overlay {
       width: 100vw !important; 
       max-width: 100vw !important;
@@ -201,15 +207,28 @@ header:
       background-position: center center !important;
       background-repeat: no-repeat !important;
       background-attachment: scroll !important; 
-      min-height: 70vh !important; 
+      
+      /* 修改点：大幅降低手机端的强制高度 */
+      /* 从原来的 70vh 改为 40vh (屏幕高度的40%) */
+      /* 这能显著减少图片为了填满高度而发生的过度拉伸和模糊 */
+      min-height: 40vh !important; 
+      
       margin: 0 !important;
       left: 0 !important;
       right: 0 !important;
+      
+      /* 增加一点内边距确保文字不贴边 */
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
-    /* 手机端字体再次缩小 */
+    /* 手机端字体缩小 */
     .page__hero--overlay .page__title,
     .page__hero--overlay .page__lead {
       font-size: 1.3em !important; 
+    }
+    /* 手机端日期也相应缩小 */
+    .workshop-date {
+        font-size: 0.45em !important;
     }
     
     body, html, .page, .page__inner-wrap, .page__content {

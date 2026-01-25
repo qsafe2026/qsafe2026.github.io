@@ -152,6 +152,47 @@ header:
     margin: 0 auto !important;
     text-align: center !important;
   }
+
+
+  /* === 新增：暴力强制由暗转明（覆盖系统的深色模式） === */
+  @media (prefers-color-scheme: dark) {
+    /* 1. 强制背景变白，文字变黑 */
+    body, .page, .page__content {
+      background-color: #fff !important;
+      color: #333 !important;
+    }
+
+    /* 2. 强制标题和链接的颜色 */
+    h1, h2, h3, h4, h5, h6 {
+      color: #0056b3 !important; /* 你的主题蓝色 */
+    }
+    a {
+      color: #0056b3 !important;
+    }
+    
+    /* 3. 修复我们自定义的方框颜色 */
+    /* 在黑夜模式下，方框里的文字如果不强制设为黑色，可能会变成白色导致看不见 */
+    .section-box {
+      background-color: #f8fbff !important; /* 保持淡蓝色背景 */
+      color: #333 !important; /* 强制文字黑色 */
+      border: 1px solid #e1e4e8 !important;
+    }
+
+    /* 4. 修复折叠面板 */
+    details, summary {
+      background-color: #fff !important;
+      color: #333 !important;
+    }
+    summary {
+      background-color: #f8fbff !important;
+    }
+
+    /* 5. 修复顶部的导航栏（如果有变黑的话） */
+    .masthead {
+      background-color: #fff !important;
+      border-bottom: 1px solid #e1e4e8 !important;
+    }
+  }
 </style>
 
 <div id="home"></div>

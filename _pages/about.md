@@ -21,19 +21,24 @@ header:
     line-height: 1.6 !important;
   }
 
-  /* 3. 标题样式 */
+  /* 3. 标题样式 (统一左对齐) */
   h2 { 
-    font-size: 28px !important; 
+    font-size: 26px !important; /* 稍微调小一点，更秀气 */
     color: #0056b3 !important;
     margin-top: 0 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 15px !important;
+    text-align: left !important; /* 【关键修改】强制左对齐 */
+    border-bottom: 1px solid #e1e4e8; /* 加一条细淡线，增加层次感 */
+    padding-bottom: 10px;
   }
   h3 { 
-    font-size: 22px !important; 
+    font-size: 20px !important; 
     color: #0056b3 !important;
+    text-align: left !important;
+    margin-bottom: 5px !important;
   }
 
-  /* === 4. 暴力拓宽页面容器 (保持背景宽敞) === */
+  /* === 4. 暴力拓宽页面 & 手机端修复 === */
   #main, .page, .page__content, .archive {
     width: 100% !important;
     max-width: 100% !important;
@@ -49,7 +54,7 @@ header:
     float: none !important;    
   }
 
-  /* 5. 【关键修改】卡片盒子样式 (调整为 2/3 宽度) */
+  /* 5. 卡片盒子样式 (方框居中，但内容左对齐) */
   .section-box {
     background-color: #f8fbff;
     border: 1px solid #e1e4e8;
@@ -59,13 +64,13 @@ header:
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     
-    /* 修改开始：宽度控制 */
-    width: 70% !important;       /* 占页面约 2/3 */
-    min-width: 800px !important; /* 保证最小宽度，防止在小屏幕太挤 */
-    margin-left: auto !important;  /* 自动居中 */
-    margin-right: auto !important; /* 自动居中 */
-    /* 修改结束 */
+    /* 电脑端宽度控制 */
+    width: 70% !important;       
+    min-width: 800px !important; 
+    margin-left: auto !important;  
+    margin-right: auto !important; 
     
+    text-align: left !important; /* 【关键】盒子里的所有文字默认左对齐 */
     box-sizing: border-box !important; 
   }
 
@@ -74,31 +79,56 @@ header:
     min-width: 500px;
     border-collapse: collapse;
     font-size: 18px !important;
+    width: 100%; /* 表格宽度填满方框 */
   }
   .program-table td, .dates-table td {
     padding: 12px 15px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
+    text-align: left; /* 表格内容左对齐 */
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
   
   .time-col { width: 160px; font-weight: bold; color: #555; }
-  .label-col { width: 300px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
+  .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. 头像和按钮 */
-  .organizer-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
+  /* 7. 头像样式 (保持居中，因为是网格布局) */
+  .organizer-grid { 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    text-align: center; /* 头像下面的名字还是居中好看 */
+  }
   .organizer-item { width: 30%; margin-bottom: 20px; }
   .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 封面副标题 */
-  .page__lead {
-    font-size: 28px !important;
-    font-weight: bold !important;
-    text-align: center !important;
-    line-height: 1.3 !important;
-    margin-top: 10px !important;
+  /* 8. 封面样式 (Cover) */
+  .page__hero--overlay .page__title {
+    color: #fff !important;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
+    font-size: 2.8em !important; /* 【修改】字体调小了 (原来可能是 3.5em+) */
+    line-height: 1.2 !important;
+  }
+  .page__hero--overlay .page__lead {
+    color: #fff !important; 
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
+    font-size: 1.5em !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* 新增：日期行样式 */
+  .workshop-date {
+    color: #fff !important;
+    font-size: 1.3em !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 图标和文字的间距 */
+    margin-top: 15px;
   }
   
   /* 9. 折叠面板样式 */
@@ -114,13 +144,13 @@ header:
     padding: 12px 20px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px; /* 稍微调小，与正文更协调 */
     color: #0056b3;
     background-color: #f8fbff;
     list-style: none;
     outline: none;
     transition: background 0.2s;
-    text-align: left; /* 确保标题文字左对齐 */
+    text-align: left; /* 折叠条标题左对齐 */
   }
   summary:hover { background-color: #eaf5ff; }
   summary::-webkit-details-marker { display: none; }
@@ -130,283 +160,203 @@ header:
   details .program-table { margin: 0; width: 100%; }
   details td { padding: 15px 20px; }
 
-  /* === 新增：隐藏顶部的主题切换/搜索按钮 === */
-  .greedy-nav .theme-toggle, 
-  .greedy-nav button, 
-  #theme-toggle,
-  button[title="Toggle theme"] {
-    display: none !important; /* 强制隐藏 */
-  }
-  
-  /* 注意：如果你发现手机版菜单按钮也不见了，请把 .greedy-nav button 这一行删掉 */
-
-  /* === 新增：暴力隐藏底部的 Sitemap 和 Follow 链接 === */
-  .page__footer-follow,
-  .social-icons {
-    display: none !important;
-  }
-  
-  /* 确保只保留我们自定义的 Copyright 居中显示 */
-  .page__footer-copyright {
-    display: block !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-  }
-
-
-  /* === 新增：暴力强制由暗转明（覆盖系统的深色模式） === */
-  @media (prefers-color-scheme: dark) {
-    /* 1. 强制背景变白，文字变黑 */
-    body, .page, .page__content {
-      background-color: #fff !important;
-      color: #333 !important;
-    }
-
-    /* 2. 强制标题和链接的颜色 */
-    h1, h2, h3, h4, h5, h6 {
-      color: #0056b3 !important; /* 你的主题蓝色 */
-    }
-    a {
-      color: #0056b3 !important;
-    }
-    
-    /* 3. 修复我们自定义的方框颜色 */
-    /* 在黑夜模式下，方框里的文字如果不强制设为黑色，可能会变成白色导致看不见 */
-    .section-box {
-      background-color: #f8fbff !important; /* 保持淡蓝色背景 */
-      color: #333 !important; /* 强制文字黑色 */
-      border: 1px solid #e1e4e8 !important;
-    }
-
-    /* 4. 修复折叠面板 */
-    details, summary {
-      background-color: #fff !important;
-      color: #333 !important;
-    }
-    summary {
-      background-color: #f8fbff !important;
-    }
-
-    /* 5. 修复顶部的导航栏（如果有变黑的话） */
-    .masthead {
-      background-color: #fff !important;
-      border-bottom: 1px solid #e1e4e8 !important;
-    }
-  }
-
-  /* === 新增：专门修复手机端封面显示 (终极修正版) === */
+  /* === 手机端适配 === */
   @media screen and (max-width: 768px) {
-    
-    /* 1. 解除 800px 的宽度锁定 */
-    /* 这是最关键的一步！告诉方框在手机上只要占屏幕的 92% 就够了 */
     .section-box {
       width: 92% !important;     
-      min-width: 0 !important;   /* 【核心】取消最小宽度限制 */
-      margin: 0 auto 30px auto !important; /* 保持居中 */
-      padding: 20px 15px !important; /* 手机上内边距稍微小一点，省空间 */
+      min-width: 0 !important;   
+      margin: 0 auto 30px auto !important; 
+      padding: 20px 15px !important; 
     }
-
-    /* 2. 修复表格撑大页面 */
-    /* 如果表格内容太长，让它在方框内部左右滑动，而不是撑爆整个网页 */
-    .section-box table, 
-    .program-table, 
-    .dates-table {
-      display: block !important;    /* 变成块级元素 */
-      width: 100% !important;       /* 宽度强制跟随父容器 */
-      min-width: 0 !important;      /* 取消表格的最小宽度限制 */
-      overflow-x: auto !important;  /* 【关键】如果内容太长，显示横向滚动条 */
-      -webkit-overflow-scrolling: touch; /* 让滚动更丝滑 */
+    .section-box table, .program-table, .dates-table {
+      display: block !important;    
+      width: 100% !important;       
+      min-width: 0 !important;      
+      overflow-x: auto !important;  
+      -webkit-overflow-scrolling: touch; 
     }
-
-    /* 3. 修复封面图 (Background) 再次确保全屏铺满 */
     .page__hero--overlay {
-      width: 100vw !important; /* 强制宽度为视口宽度的 100% */
+      width: 100vw !important; 
       max-width: 100vw !important;
-      background-size: cover !important; /* 强制铺满 */
+      background-size: cover !important; 
       background-position: center center !important;
       background-repeat: no-repeat !important;
-      background-attachment: scroll !important; /* 手机必须用 scroll */
-      min-height: 70vh !important; /* 高度给足 */
+      background-attachment: scroll !important; 
+      min-height: 70vh !important; 
       margin: 0 !important;
       left: 0 !important;
       right: 0 !important;
     }
+    /* 手机端字体再次微调 */
+    .page__hero--overlay .page__title {
+      font-size: 1.8em !important; /* 手机上更小一点，防止折行太难看 */
+    }
+    .workshop-date {
+      font-size: 1.1em !important;
+    }
     
-    /* 4. 确保所有外层容器都没有奇怪的边距 */
     body, html, .page, .page__inner-wrap, .page__content {
       width: 100% !important;
       max-width: 100% !important;
-      overflow-x: hidden !important; /* 禁止整个网页出现横向滚动条 */
+      overflow-x: hidden !important; 
       margin: 0 !important;
       padding: 0 !important;
     }
   }
-  
-  /* === 新增：修复封面大标题颜色 === */
-  /* 特指：只修改封面图(overlay)上面的标题 */
-  .page__hero--overlay .page__title {
-    color: #fff !important; /* 强制白色 */
-    
-    /* 建议加一点文字阴影，防止背景图太亮时看不清文字 */
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
-  }
 
-  /* 如果封面上的副标题（Workshop...）也变蓝了，把下面这几行也加上 */
-  .page__hero--overlay .page__lead {
-    color: #fff !important; 
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
+  /* 隐藏多余元素 */
+  .greedy-nav .theme-toggle, .greedy-nav button, #theme-toggle, button[title="Toggle theme"] { display: none !important; }
+  .page__footer-follow, .social-icons { display: none !important; }
+  .page__footer-copyright { display: block !important; margin: 0 auto !important; text-align: center !important; }
+  
+  /* 强制白天模式 */
+  @media (prefers-color-scheme: dark) {
+    body, .page, .page__content { background-color: #fff !important; color: #333 !important; }
+    h1, h2, h3, h4, h5, h6 { color: #0056b3 !important; }
+    a { color: #0056b3 !important; }
+    .section-box { background-color: #f8fbff !important; color: #333 !important; border: 1px solid #e1e4e8 !important; }
+    details, summary { background-color: #fff !important; color: #333 !important; }
+    summary { background-color: #f8fbff !important; }
+    .masthead { background-color: #fff !important; border-bottom: 1px solid #e1e4e8 !important; }
   }
 </style>
 
 <div id="home"></div>
-<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
-  <h2 style="text-align: center;">Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
-  <div style="width: fit-content; max-width: 90%; text-align: justify;">
+
+<div class="section-box">
+  <h2>Workshop at IEEE ISIT 2026 (Guangzhou)</h2>
+  <div style="text-align: justify;">
     This workshop focuses on coding theory as a unifying foundation for post-quantum cryptography (PQC) and quantum reliability, highlighting how classical codes, lattices, and decoding algorithms underpin both quantum-safe security and fault-tolerant quantum information processing. The workshop aims to bring together researchers from information theory, coding theory, post-quantum cryptography, and quantum error correction to explore shared mathematical structures and algorithmic principles.
   </div>
 </div>
 
-<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
+<div class="section-box">
   <h2>Topics</h2>
-  <div style="width: fit-content; text-align: left;">
-    <p>We invite submissions on (but not limited to) the following topics:</p>
-    <ul>
-      <li>Code-based cryptography (CBC) and decoding-based security assumptions</li>
-      <li>Lattice-based cryptography (LBC), including LWE/LWR and related constructions</li>
-      <li>Quantum error correction codes (QECC), including stabilizer and CSS constructions</li>
-      <li>Information-theoretic security and coding-based approaches to quantum-safe communication</li>
-      <li>Decoding algorithms for post-quantum security and quantum reliability</li>
-    </ul>
-  </div>
+  <p>We invite submissions on (but not limited to) the following topics:</p>
+  <ul>
+    <li>Code-based cryptography (CBC) and decoding-based security assumptions</li>
+    <li>Lattice-based cryptography (LBC), including LWE/LWR and related constructions</li>
+    <li>Quantum error correction codes (QECC), including stabilizer and CSS constructions</li>
+    <li>Information-theoretic security and coding-based approaches to quantum-safe communication</li>
+    <li>Decoding algorithms for post-quantum security and quantum reliability</li>
+  </ul>
 </div>
 
 <div id="submission"></div>
-<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
+<div class="section-box">
   <h2>Paper Submission and Dates</h2>
+  <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
   
-  <div style="width: fit-content; text-align: left;">
-    <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
-    
-    <h3>Important Dates</h3>
-    <table class="dates-table">
-      <tr>
-        <td class="label-col">Paper Submission:</td>
-        <td class="date-col">April 7, 2026 (firm)</td>
-      </tr>
-      <tr>
-        <td class="label-col">Notification of Acceptance:</td>
-        <td class="date-col">April 21, 2026</td>
-      </tr>
-      <tr>
-        <td class="label-col">Final Manuscript:</td>
-        <td class="date-col">April 28, 2026</td>
-      </tr>
-    </table>
-  </div>
+  <h3>Important Dates</h3>
+  <table class="dates-table">
+    <tr>
+      <td class="label-col">Paper Submission:</td>
+      <td class="date-col">April 7, 2026 (firm)</td>
+    </tr>
+    <tr>
+      <td class="label-col">Notification of Acceptance:</td>
+      <td class="date-col">April 21, 2026</td>
+    </tr>
+    <tr>
+      <td class="label-col">Final Manuscript:</td>
+      <td class="date-col">April 28, 2026</td>
+    </tr>
+  </table>
 </div>
 
 <div id="speakers"></div>
-<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
-  
-  <h2 style="text-align: center; margin-bottom: 5px !important;">Keynote Speakers</h2>
+<div class="section-box">
+  <h2>Keynote Speakers</h2>
 
-  <div style="width: fit-content; text-align: left;">
-    
-    <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
-    <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
+  <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
+  <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
 
-    <h3 style="margin-bottom: 2px; margin-top: 20px;">Prof. Divesh Aggarwal</h3>
-    <p style="margin-top: 0;"><strong>National University of Singapore</strong></p>
+  <h3 style="margin-bottom: 2px; margin-top: 25px;">Prof. Divesh Aggarwal</h3>
+  <p style="margin-top: 0;"><strong>National University of Singapore</strong></p>
 
-    <h3 style="margin-bottom: 2px; margin-top: 20px;">Prof. Chunming Tang</h3>
-    <p style="margin-top: 0;"><strong>Southwest Jiaotong University, China</strong></p>
-    
-  </div>
+  <h3 style="margin-bottom: 2px; margin-top: 25px;">Prof. Chunming Tang</h3>
+  <p style="margin-top: 0;"><strong>Southwest Jiaotong University, China</strong></p>
 </div>
 
 <div id="program"></div>
-<div class="section-box" style="display: flex; flex-direction: column; align-items: center;">
+<div class="section-box">
   <h2>Tentative Program</h2>
 
-  <div style="width: 100%; max-width: 900px; text-align: left;">
-    
-    <details open>
-      <summary>Session I: Code-Based Cryptography (CBC)</summary>
-      <table class="program-table">
-        <tr>
-          <td class="time-col">09:00 - 09:30</td>
-          <td class="event-col">Invited Talk (TBA)</td>
-        </tr>
-        <tr>
-          <td class="time-col">09:30 - 10:00</td>
-          <td class="event-col">Selected Contributors</td>
-        </tr>
-        <tr>
-          <td class="time-col">10:00 - 10:30</td>
-          <td class="event-col">Selected Contributors</td>
-        </tr>
-        <tr>
-          <td class="time-col">10:30 - 11:00</td>
-          <td class="event-col">Morning Tea Break</td>
-        </tr>
-      </table>
-    </details>
+  <details open>
+    <summary>Session I: Code-Based Cryptography (CBC)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">09:00 - 09:30</td>
+        <td class="event-col">Invited Talk (TBA)</td>
+      </tr>
+      <tr>
+        <td class="time-col">09:30 - 10:00</td>
+        <td class="event-col">Selected Contributors</td>
+      </tr>
+      <tr>
+        <td class="time-col">10:00 - 10:30</td>
+        <td class="event-col">Selected Contributors</td>
+      </tr>
+      <tr>
+        <td class="time-col">10:30 - 11:00</td>
+        <td class="event-col">Morning Tea Break</td>
+      </tr>
+    </table>
+  </details>
 
-    <details>
-      <summary>Session II: Lattice-Based Cryptography (LBC)</summary>
-      <table class="program-table">
-        <tr>
-          <td class="time-col">11:00 - 11:30</td>
-          <td class="event-col">Invited Talk (TBA)</td>
-        </tr>
-        <tr>
-          <td class="time-col">11:30 - 12:00</td>
-          <td class="event-col">Selected Contributors</td>
-        </tr>
-        <tr>
-          <td class="time-col">12:00 - 12:30</td>
-          <td class="event-col">Selected Contributors</td>
-        </tr>
-        <tr>
-          <td class="time-col">12:30 - 13:30</td>
-          <td class="event-col">Lunch Break</td>
-        </tr>
-      </table>
-    </details>
+  <details>
+    <summary>Session II: Lattice-Based Cryptography (LBC)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">11:00 - 11:30</td>
+        <td class="event-col">Invited Talk (TBA)</td>
+      </tr>
+      <tr>
+        <td class="time-col">11:30 - 12:00</td>
+        <td class="event-col">Selected Contributors</td>
+      </tr>
+      <tr>
+        <td class="time-col">12:00 - 12:30</td>
+        <td class="event-col">Selected Contributors</td>
+      </tr>
+      <tr>
+        <td class="time-col">12:30 - 13:30</td>
+        <td class="event-col">Lunch Break</td>
+      </tr>
+    </table>
+  </details>
 
-    <details>
-      <summary>Session III: Quantum Error Correction Codes (QECC)</summary>
-      <table class="program-table">
-        <tr>
-          <td class="time-col">13:30 - 14:00</td>
-          <td class="event-col">Invited Talk (TBA)</td>
-        </tr>
-        <tr>
-          <td class="time-col">14:00 - 14:30</td>
-          <td class="event-col">Selected Contributors</td>
-        </tr>
-        <tr>
-          <td class="time-col">14:30 - 15:00</td>
-          <td class="event-col">Selected Contributors</td>
-        </tr>
-        <tr>
-          <td class="time-col">15:00 - 15:30</td>
-          <td class="event-col">Afternoon Tea Break</td>
-        </tr>
-      </table>
-    </details>
+  <details>
+    <summary>Session III: Quantum Error Correction Codes (QECC)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">13:30 - 14:00</td>
+        <td class="event-col">Invited Talk (TBA)</td>
+      </tr>
+      <tr>
+        <td class="time-col">14:00 - 14:30</td>
+        <td class="event-col">Selected Contributors</td>
+      </tr>
+      <tr>
+        <td class="time-col">14:30 - 15:00</td>
+        <td class="event-col">Selected Contributors</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:00 - 15:30</td>
+        <td class="event-col">Afternoon Tea Break</td>
+      </tr>
+    </table>
+  </details>
 
-    <details>
-      <summary>Interactive Session</summary>
-      <table class="program-table">
-        <tr>
-          <td class="time-col">15:30 - 16:30</td>
-          <td class="event-col">Panel Discussion</td>
-        </tr>
-      </table>
-    </details>
-    
-  </div>
+  <details>
+    <summary>Interactive Session</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">15:30 - 16:30</td>
+        <td class="event-col">Panel Discussion</td>
+      </tr>
+    </table>
+  </details>
 </div>
 
 <div id="organizers"></div>
@@ -436,3 +386,20 @@ header:
     </div>
   </div>
 </div>
+
+<script>
+  // 这段代码会自动在封面标题下面插入日期
+  document.addEventListener("DOMContentLoaded", function() {
+    var heroTitle = document.querySelector('.page__hero--overlay .page__lead');
+    if(heroTitle) {
+      var dateDiv = document.createElement('div');
+      dateDiv.className = 'workshop-date';
+      // 这里是 SVG 图标 (日历)
+      dateDiv.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span>July 03 (Friday), 2026</span>
+      `;
+      heroTitle.parentNode.insertBefore(dateDiv, heroTitle.nextSibling);
+    }
+  });
+</script>

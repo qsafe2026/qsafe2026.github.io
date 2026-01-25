@@ -9,10 +9,10 @@ header:
 ---
 
 <style>
-  /* 【关键修改1】引入新的、更好看的艺术字体 Playfair Display (包含粗体和斜体样式) */
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  /* 1. 引入 Google Fonts - 只保留最干净的 Open Sans */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
-  /* 2. 全局设置 (正文继续用 Open Sans) */
+  /* 2. 全局设置 (全部统一使用 Open Sans) */
   body, h1, h4, h5, h6, p, li, td, th, div, a, span {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
   }
@@ -112,17 +112,17 @@ header:
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改2】封面标题样式重塑 */
+  /* 8. 【关键修改】封面标题样式重塑 (回归极简、专业) */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
-    /* 应用新字体 Playfair Display */
-    font-family: 'Playfair Display', serif !important;
+    /* 使用最标准的 Open Sans，不花哨 */
+    font-family: 'Open Sans', sans-serif !important;
     
-    /* 要求：加粗 (700) */
-    font-weight: 700 !important; 
+    /* 保持加粗，才有气势 */
+    font-weight: 800 !important; 
     
-    /* 要求：斜体 (italic) */
-    font-style: italic !important;
+    /* 【修改】去掉斜体，改为正体 */
+    font-style: normal !important;
     
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
@@ -138,20 +138,23 @@ header:
     margin-top: 5px !important; 
   }
 
-  /* 9. 【关键修改3】日期样式 (新字体、0.5大小) */
+  /* 9. 【关键修改】日期样式 (回归极简) */
   .workshop-date {
-    /* 应用新字体 */
-    font-family: 'Playfair Display', serif !important;
+    /* 使用 Open Sans，不花哨 */
+    font-family: 'Open Sans', sans-serif !important;
     
-    /* 要求：大小改为 0.5em (非常小) */
-    font-size: 0.5em !important; 
+    /* 大小 0.55em (因为Open Sans比之前的艺术字体视觉上小一点，稍微加一点点保证能看清) */
+    font-size: 0.55em !important; 
     
+    /* 【修改】去掉斜体 */
+    font-style: normal !important;
     font-weight: normal !important; 
-    /* 稍微加一点字间距提高可读性 */
-    letter-spacing: 1px !important;
+    
+    letter-spacing: 0.5px !important;
     color: rgba(255,255,255,0.95);
     display: inline-block;
     margin-top: 8px;
+    text-transform: uppercase; /* 可选：让日期全大写，看起来更像“信息” */
   }
   
   /* 10. 折叠面板样式 */
@@ -183,7 +186,7 @@ header:
   details .program-table { margin: 0; width: 100%; }
   details td { padding: 15px 20px; }
 
-  /* === 手机端适配 === */
+  /* === 手机端适配 (保持防拉伸模糊设置) === */
   @media screen and (max-width: 768px) {
     .section-box {
       width: 92% !important;     
@@ -199,7 +202,6 @@ header:
       -webkit-overflow-scrolling: touch; 
     }
     
-    /* 【关键修改4】修复封面拉伸模糊问题 */
     .page__hero--overlay {
       width: 100vw !important; 
       max-width: 100vw !important;
@@ -207,28 +209,19 @@ header:
       background-position: center center !important;
       background-repeat: no-repeat !important;
       background-attachment: scroll !important; 
-      
-      /* 修改点：大幅降低手机端的强制高度 */
-      /* 从原来的 70vh 改为 40vh (屏幕高度的40%) */
-      /* 这能显著减少图片为了填满高度而发生的过度拉伸和模糊 */
-      min-height: 40vh !important; 
-      
+      min-height: 40vh !important; /* 保持40vh，防拉伸 */
       margin: 0 !important;
       left: 0 !important;
       right: 0 !important;
-      
-      /* 增加一点内边距确保文字不贴边 */
       padding-left: 15px !important;
       padding-right: 15px !important;
     }
-    /* 手机端字体缩小 */
     .page__hero--overlay .page__title,
     .page__hero--overlay .page__lead {
       font-size: 1.3em !important; 
     }
-    /* 手机端日期也相应缩小 */
     .workshop-date {
-        font-size: 0.45em !important;
+        font-size: 0.5em !important;
     }
     
     body, html, .page, .page__inner-wrap, .page__content {

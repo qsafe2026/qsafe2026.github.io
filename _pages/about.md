@@ -9,10 +9,10 @@ header:
 ---
 
 <style>
-  /* 1. 引入 Google Fonts - 只保留最干净的 Open Sans */
+  /* 1. 引入 Google Fonts */
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
-  /* 2. 全局设置 (全部统一使用 Open Sans) */
+  /* 2. 全局设置 */
   body, h1, h4, h5, h6, p, li, td, th, div, a, span {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
   }
@@ -112,17 +112,14 @@ header:
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改】封面标题样式重塑 (回归极简、专业) */
+  /* 8. 【关键修改】封面标题样式 (斜体) */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
-    /* 使用最标准的 Open Sans，不花哨 */
     font-family: 'Open Sans', sans-serif !important;
-    
-    /* 保持加粗，才有气势 */
     font-weight: 800 !important; 
     
-    /* 【修改】去掉斜体，改为正体 */
-    font-style: normal !important;
+    /* 要求：改为斜体 */
+    font-style: italic !important;
     
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
@@ -138,23 +135,26 @@ header:
     margin-top: 5px !important; 
   }
 
-  /* 9. 【关键修改】日期样式 (回归极简) */
+  /* 9. 【关键修改】日期样式 (无斜体 + 白色方框) */
   .workshop-date {
-    /* 使用 Open Sans，不花哨 */
     font-family: 'Open Sans', sans-serif !important;
+    font-size: 0.6em !important; /* 字体稍微调回0.6以便看清，配合框框正好 */
     
-    /* 大小 0.55em (因为Open Sans比之前的艺术字体视觉上小一点，稍微加一点点保证能看清) */
-    font-size: 0.55em !important; 
-    
-    /* 【修改】去掉斜体 */
+    /* 要求：无斜体 */
     font-style: normal !important;
-    font-weight: normal !important; 
+    font-weight: 600 !important; 
     
-    letter-spacing: 0.5px !important;
-    color: rgba(255,255,255,0.95);
+    letter-spacing: 1px !important;
+    color: #fff;
     display: inline-block;
-    margin-top: 8px;
-    text-transform: uppercase; /* 可选：让日期全大写，看起来更像“信息” */
+    
+    /* 要求：白色方框 */
+    border: 2px solid #fff; 
+    padding: 8px 15px;     /* 内边距：上下8px，左右15px，撑开方框 */
+    border-radius: 4px;    /* 稍微加一点点圆角，看起来更高级（如果是直角改成0px）*/
+    margin-top: 15px;      /* 离标题远一点 */
+    background-color: rgba(0,0,0,0.1); /* 微微的半透明背景，增强文字清晰度 */
+    text-transform: uppercase;
   }
   
   /* 10. 折叠面板样式 */
@@ -186,7 +186,7 @@ header:
   details .program-table { margin: 0; width: 100%; }
   details td { padding: 15px 20px; }
 
-  /* === 手机端适配 (保持防拉伸模糊设置) === */
+  /* === 手机端适配 === */
   @media screen and (max-width: 768px) {
     .section-box {
       width: 92% !important;     
@@ -209,7 +209,7 @@ header:
       background-position: center center !important;
       background-repeat: no-repeat !important;
       background-attachment: scroll !important; 
-      min-height: 40vh !important; /* 保持40vh，防拉伸 */
+      min-height: 40vh !important; 
       margin: 0 !important;
       left: 0 !important;
       right: 0 !important;
@@ -222,6 +222,7 @@ header:
     }
     .workshop-date {
         font-size: 0.5em !important;
+        padding: 5px 10px !important; /* 手机上框框稍微小一点 */
     }
     
     body, html, .page, .page__inner-wrap, .page__content {

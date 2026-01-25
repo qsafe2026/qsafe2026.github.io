@@ -194,32 +194,52 @@ header:
     }
   }
 
-  /* === 新增：专门修复手机端封面显示 === */
+  /* === 新增：专门修复手机端封面显示 (终极修正版) === */
   @media screen and (max-width: 768px) {
+    
+    /* 1. 针对 wrapper 的修复：确保容器本身就是全宽的 */
+    .initial-content, 
+    .page__hero--overlay,
+    .page__hero {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* 2. 针对背景图的修复 */
     .page__hero--overlay {
-      /* 1. 强制高度为屏幕高度的 75% */
-      /* 你可以改成 80vh 或 100vh (全屏)，数字越大越高 */
-      min-height: 75vh !important; 
+      /* 【核心关键点】手机上必须用 scroll，绝对不能用 fixed！*/
+      /* fixed 会导致图片在手机上定位错乱，看起来像只有一半 */
+      background-attachment: scroll !important; 
       
-      /* 2. 确保图片居中剪裁，不会只显示左上角 */
+      /* 强制居中剪裁 */
       background-position: center center !important;
-      
-      /* 3. 确保图片覆盖整个区域 */
       background-size: cover !important;
+      
+      /* 设置合理的高度，太高了手机滑不动 */
+      min-height: 60vh !important; 
     }
     
-    /* 4. 手机上标题字太大了会换行很难看，这里稍微改小一点 */
+    /* 3. 修复标题文字大小和边距 */
     .page__hero--overlay .page__title {
-      font-size: 2.2em !important;
-      padding: 0 20px !important; /* 防止文字贴着屏幕边缘 */
+      font-size: 2.0em !important; /* 稍微改小一点，防止换行太难看 */
+      line-height: 1.2 !important;
+      padding: 0 15px !important;    /* 左右留点缝隙 */
+      width: 100% !important;        /* 确保文字容器也是全宽 */
+      box-sizing: border-box !important;
     }
     
-    /* 5. 修复副标题在手机上的大小 */
+    /* 4. 修复副标题 */
     .page__lead {
-      font-size: 1.2em !important;
-      padding: 0 10px !important;
+      font-size: 1.1em !important;
+      padding: 0 15px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
   }
+  
   /* === 新增：修复封面大标题颜色 === */
   /* 特指：只修改封面图(overlay)上面的标题 */
   .page__hero--overlay .page__title {

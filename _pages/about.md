@@ -9,10 +9,10 @@ header:
 ---
 
 <style>
-  /* 1. 引入 Google Fonts - 只保留最干净的 Open Sans */
+  /* 1. 引入 Google Fonts */
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
-  /* 2. 全局设置 (全部统一使用 Open Sans) */
+  /* 2. 全局设置 */
   body, h1, h4, h5, h6, p, li, td, th, div, a, span {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
   }
@@ -92,7 +92,7 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. Organizers 样式 */
+  /* 7. Organizers 样式 (修改了照片形状) */
   .organizer-grid { 
     display: flex; 
     justify-content: space-around; 
@@ -100,7 +100,16 @@ header:
     text-align: center !important; 
   }
   .organizer-item { width: 30%; margin-bottom: 20px; }
-  .organizer-item img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #f0f0f0; }
+  
+  /* 【关键修改】照片改为长方形 */
+  .organizer-item img { 
+    border-radius: 6px !important; /* 不要是圆形的50%，改成微圆角长方形 */
+    width: 150px !important; 
+    height: 200px !important; /* 高度增加，变长方形 */
+    object-fit: cover !important; 
+    border: 3px solid #f0f0f0; 
+  }
+  
   .organizer-item h3 { text-align: center !important; margin-bottom: 5px !important; }
   
   .organizer-item p { 
@@ -112,18 +121,12 @@ header:
   
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
-  /* 8. 【关键修改】封面标题样式重塑 (回归极简、专业) */
+  /* 8. 封面标题样式 */
   .page__hero--overlay .page__title,
   .page__hero--overlay .page__lead {
-    /* 使用最标准的 Open Sans，不花哨 */
     font-family: 'Open Sans', sans-serif !important;
-    
-    /* 保持加粗，才有气势 */
     font-weight: 800 !important; 
-    
-    /* 【修改】去掉斜体，改为正体 */
     font-style: normal !important;
-    
     color: #fff !important;
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
     font-size: 1.7em !important; 
@@ -138,23 +141,28 @@ header:
     margin-top: 5px !important; 
   }
 
-  /* 9. 【关键修改】日期样式 (回归极简) */
+  /* 9. 【关键修改】日期样式 (微软雅黑 + 加粗) */
   .workshop-date {
-    /* 使用 Open Sans，不花哨 */
-    font-family: 'Open Sans', sans-serif !important;
+    /* 改为微软雅黑 */
+    font-family: 'Microsoft YaHei', 'SimHei', sans-serif !important;
     
-    /* 大小 0.55em (因为Open Sans比之前的艺术字体视觉上小一点，稍微加一点点保证能看清) */
     font-size: 0.55em !important; 
-    
-    /* 【修改】去掉斜体 */
     font-style: normal !important;
-    font-weight: normal !important; 
+    
+    /* 改为加粗 */
+    font-weight: bold !important; 
     
     letter-spacing: 0.5px !important;
     color: rgba(255,255,255,0.95);
     display: inline-block;
     margin-top: 8px;
-    text-transform: uppercase; /* 可选：让日期全大写，看起来更像“信息” */
+    
+    /* 这里的白色边框依然保留，如果不要框把下面这几行删掉即可 */
+    border: 2px solid #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.1);
+    text-transform: uppercase;
   }
   
   /* 10. 折叠面板样式 */
@@ -186,7 +194,7 @@ header:
   details .program-table { margin: 0; width: 100%; }
   details td { padding: 15px 20px; }
 
-  /* === 手机端适配 (保持防拉伸模糊设置) === */
+  /* === 手机端适配 === */
   @media screen and (max-width: 768px) {
     .section-box {
       width: 92% !important;     
@@ -209,7 +217,7 @@ header:
       background-position: center center !important;
       background-repeat: no-repeat !important;
       background-attachment: scroll !important; 
-      min-height: 40vh !important; /* 保持40vh，防拉伸 */
+      min-height: 40vh !important; 
       margin: 0 !important;
       left: 0 !important;
       right: 0 !important;
@@ -293,14 +301,14 @@ header:
 <div class="section-box">
   <h2>Keynote Speakers</h2>
 
-  <h3 style="margin-bottom: 2px;">Prof. Biao Chen (IEEE Fellow)</h3>
-  <p style="margin-top: 0;"><strong>Syracuse University, USA</strong></p>
+  <h3 style="margin-bottom: 2px; color: #000 !important; font-weight: bold;">Prof. Biao Chen (IEEE Fellow)</h3>
+  <p style="margin-top: 0;">Syracuse University, USA</p>
 
-  <h3 style="margin-bottom: 2px; margin-top: 25px;">Prof. Divesh Aggarwal</h3>
-  <p style="margin-top: 0;"><strong>National University of Singapore</strong></p>
+  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Divesh Aggarwal</h3>
+  <p style="margin-top: 0;">National University of Singapore</p>
 
-  <h3 style="margin-bottom: 2px; margin-top: 25px;">Prof. Chunming Tang</h3>
-  <p style="margin-top: 0;"><strong>Southwest Jiaotong University, China</strong></p>
+  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Chunming Tang</h3>
+  <p style="margin-top: 0;">Southwest Jiaotong University, China</p>
 </div>
 
 <div id="program"></div>

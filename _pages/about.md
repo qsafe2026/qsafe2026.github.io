@@ -92,7 +92,7 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
 
-  /* 7. Organizers 样式 (修改了照片形状) */
+  /* 7. Organizers 样式 (照片长方形) */
   .organizer-grid { 
     display: flex; 
     justify-content: space-around; 
@@ -101,16 +101,22 @@ header:
   }
   .organizer-item { width: 30%; margin-bottom: 20px; }
   
-  /* 【关键修改】照片改为长方形 */
+  /* 照片改为长方形 */
   .organizer-item img { 
-    border-radius: 6px !important; /* 不要是圆形的50%，改成微圆角长方形 */
+    border-radius: 6px !important; 
     width: 150px !important; 
-    height: 200px !important; /* 高度增加，变长方形 */
+    height: 200px !important; 
     object-fit: cover !important; 
     border: 3px solid #f0f0f0; 
   }
   
-  .organizer-item h3 { text-align: center !important; margin-bottom: 5px !important; }
+  /* 【关键修改】Organizers 人名黑色加粗 */
+  .organizer-item h3 { 
+      text-align: center !important; 
+      margin-bottom: 5px !important;
+      color: #000 !important; /* 黑色 */
+      font-weight: bold !important; /* 加粗 */
+  }
   
   .organizer-item p { 
     text-align: center !important; 
@@ -141,27 +147,17 @@ header:
     margin-top: 5px !important; 
   }
 
-  /* 9. 【关键修改】日期样式 (微软雅黑 + 加粗) */
+  /* 9. 【关键修改】日期样式 (去掉方框，保留微软雅黑加粗) */
   .workshop-date {
-    /* 改为微软雅黑 */
     font-family: 'Microsoft YaHei', 'SimHei', sans-serif !important;
-    
     font-size: 0.55em !important; 
     font-style: normal !important;
-    
-    /* 改为加粗 */
     font-weight: bold !important; 
-    
     letter-spacing: 0.5px !important;
     color: rgba(255,255,255,0.95);
     display: inline-block;
     margin-top: 8px;
-    
-    /* 这里的白色边框依然保留，如果不要框把下面这几行删掉即可 */
-    border: 2px solid #fff;
-    padding: 8px 15px;
-    border-radius: 4px;
-    background-color: rgba(0,0,0,0.1);
+    /* 去掉了原来的 border, padding, background-color */
     text-transform: uppercase;
   }
   
@@ -405,17 +401,17 @@ header:
     </div>
 
     <div class="organizer-item">
-      <img src="/images/ling.jpg" alt="Ling Liu">
-      <h3>Ling Liu</h3>
-      <p>Xidian University, China<br>Email: liuling@xidian.edu.cn</p>
-      <a href="https://faculty.xidian.edu.cn/LIULING/en/index.htm" target="_blank" class="btn btn--info">Personal website</a>
-    </div>
-
-    <div class="organizer-item">
       <img src="/images/shanxiang.jpg" alt="Shanxiang Lyu">
       <h3>Shanxiang Lyu</h3>
       <p>Jinan University, China<br>Email: lsx07@jnu.edu.cn</p>
       <a href="https://sites.google.com/view/shanx" target="_blank" class="btn btn--info">Personal website</a>
+    </div>
+
+    <div class="organizer-item">
+      <img src="/images/ling.jpg" alt="Ling Liu">
+      <h3>Ling Liu</h3>
+      <p>Xidian University, China<br>Email: liuling@xidian.edu.cn</p>
+      <a href="https://faculty.xidian.edu.cn/LIULING/en/index.htm" target="_blank" class="btn btn--info">Personal website</a>
     </div>
   </div>
 </div>

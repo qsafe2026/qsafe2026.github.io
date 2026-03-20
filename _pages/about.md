@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "ISIT 2026 Workshop on Coding Theory for Post-Quantum Security and Quantum Reliability"
-excerpt: "<span class='workshop-date'>July 03 (Friday), 2026</span>"
+title: "ISIT 2026 Workshop on Coding Theory for "
+excerpt: "Post-Quantum Security and Quantum Reliability<br><span class='workshop-date'>July 03 (Friday), 2026</span>"
 author_profile: false
 header:
   overlay_image: "https://qsafe2026.github.io/images/header-bg.jpg"

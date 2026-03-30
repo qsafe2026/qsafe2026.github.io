@@ -296,15 +296,18 @@ header:
 <div id="speakers"></div>
 <div class="section-box">
   <h2>Keynote Speakers</h2>
-
-  <h3 style="margin-bottom: 2px; color: #000 !important; font-weight: bold;">Prof. Biao Chen (IEEE Fellow)</h3>
-  <p style="margin-top: 0;">Syracuse University, USA</p>
-
   <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Divesh Aggarwal</h3>
   <p style="margin-top: 0;">National University of Singapore</p>
+  
+  <h3 style="margin-bottom: 2px; color: #000 !important; font-weight: bold;">Prof. Biao Chen (IEEE Fellow)</h3>
+  <p style="margin-top: 0;">Syracuse University, USA</p>
+  
+  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Alexey Frolov</h3>
+  <p style="margin-top: 0;">Skolkovo Institute of Science and Technology, Russia</p>
 
-  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Chunming Tang</h3>
+   <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Chunming Tang</h3>
   <p style="margin-top: 0;">Southwest Jiaotong University, China</p>
+
 </div>
 
 <div id="program"></div>

@@ -298,7 +298,7 @@ header:
   <h2>Keynote Speakers</h2>
 
   <h3 style="margin-bottom: 2px; color: #000 !important; font-weight: bold;">Prof. Divesh Aggarwal</h3>
-  <p style="margin-top: 0;">National University of Singapore</p>
+  <p style="margin-top: 0;">National University of Singapore, Singapore</p>
 
   <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Biao Chen (IEEE Fellow)</h3>
   <p style="margin-top: 0;">Syracuse University, USA</p>

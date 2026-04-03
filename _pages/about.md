@@ -297,19 +297,19 @@ header:
 <div class="section-box">
   <h2>Keynote Speakers</h2>
 
-  <h3 style="margin-bottom: 2px; color: #000 !important; font-weight: bold;">Prof. Divesh Aggarwal</h3>
+  <h3 style="margin-bottom: 2px; color: #000 !important; font-weight: bold;">Divesh Aggarwal</h3>
   <p style="margin-top: 0;">National University of Singapore, Singapore</p>
 
   <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Sebastian Bitzer</h3>
   <p style="margin-top: 0;"> Technical University of Munich, Germany</p>
 
-  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Alexey Frolov</h3>
+  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Alexey Frolov</h3>
   <p style="margin-top: 0;">Skolkovo Institute of Science and Technology, Russia</p>
 
-  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Dr. Paolo Santini</h3>
+  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Paolo Santini</h3>
   <p style="margin-top: 0;">Marche Polytechnic University, Italy</p>
 
-  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Prof. Chunming Tang</h3>
+  <h3 style="margin-bottom: 2px; margin-top: 25px; color: #000 !important; font-weight: bold;">Chunming Tang</h3>
   <p style="margin-top: 0;">Southwest Jiaotong University, China</p>
 
 </div>

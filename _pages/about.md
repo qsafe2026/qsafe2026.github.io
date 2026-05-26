@@ -73,9 +73,9 @@ header:
     box-sizing: border-box !important; 
   }
   .program-section {
-    width: 96% !important;
-    min-width: 980px !important;
-    padding: 34px 2.5% !important;
+    width: 70% !important;
+    min-width: 800px !important;
+    padding: 40px 12% !important;
   }
   .program-section details {
     overflow-x: auto;
@@ -87,15 +87,21 @@ header:
     min-width: 500px;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 18px !important;
     width: 100%; 
   }
+  .program-table { font-size: 15.5px !important; }
+  .dates-table { font-size: 18px !important; }
   .program-table td, .dates-table td {
     padding: 13px 16px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
     text-align: left; 
     transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .program-table td,
+  .program-table th {
+    font-size: 15.5px !important;
+    line-height: 1.45 !important;
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
 
@@ -116,7 +122,7 @@ header:
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
   .program-table th {
-    padding: 11px 16px;
+    padding: 10px 12px;
     border-bottom: 2px solid #d0d7de;
     text-align: left;
     color: #0056b3;
@@ -124,18 +130,18 @@ header:
     white-space: nowrap !important;
   }
   .schedule-table {
-    min-width: 1040px;
+    min-width: 960px;
     overflow: hidden;
   }
   .schedule-table td {
     border-bottom: 1px solid #e6edf5;
   }
-  .schedule-table .time-col { width: 145px; }
-  .schedule-table .type-col { width: 180px; }
-  .schedule-table .speaker-col { width: 170px; }
-  .schedule-table .topic-col { width: 210px; }
+  .schedule-table .time-col { width: 130px; }
+  .schedule-table .type-col { width: 160px; }
+  .schedule-table .speaker-col { width: 150px; }
+  .schedule-table .topic-col { width: 190px; }
   .schedule-table .title-col {
-    min-width: 360px;
+    min-width: 330px;
     line-height: 1.5 !important;
   }
 
@@ -235,7 +241,7 @@ header:
   details[open] summary::after { content: '-'; }
   details[open] summary { border-bottom: 1px solid #e1e4e8; }
   details .program-table { margin: 0; width: 100%; }
-  details td { padding: 15px 20px; }
+  details td { padding: 10px 12px; }
 
   /* === 手机端适配 === */
   @media screen and (max-width: 768px) {
@@ -246,9 +252,9 @@ header:
       padding: 20px 15px !important; 
     }
     .program-section {
-      width: 96% !important;
+      width: 92% !important;
       min-width: 0 !important;
-      padding: 20px 12px !important;
+      padding: 20px 15px !important;
     }
     .section-box table, .program-table, .dates-table {
       display: block !important;    
@@ -258,7 +264,7 @@ header:
       -webkit-overflow-scrolling: touch; 
     }
     .schedule-table {
-      min-width: 980px !important;
+      min-width: 900px !important;
     }
     
     .page__hero--overlay {

@@ -87,10 +87,21 @@ header:
     text-align: left; 
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
-  
+
   .time-col { width: 160px; font-weight: bold; color: #555; }
+  .type-col { width: 150px; font-weight: bold; color: #333; }
+  .title-col { width: 35%; }
+  .speaker-col { width: 170px; font-weight: bold; color: #333; }
+  .topic-col { width: 220px; color: #555; }
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
+  .program-table th {
+    padding: 10px 15px;
+    border-bottom: 2px solid #d0d7de;
+    text-align: left;
+    color: #0056b3;
+    font-weight: 700;
+  }
 
   /* 7. Organizers 样式 (照片长方形) */
   .organizer-grid { 
@@ -100,7 +111,7 @@ header:
     text-align: center !important; 
   }
   .organizer-item { width: 30%; margin-bottom: 20px; }
-  
+
   /* 照片改为长方形 */
   .organizer-item img { 
     border-radius: 6px !important; 
@@ -109,7 +120,7 @@ header:
     object-fit: cover !important; 
     border: 3px solid #f0f0f0; 
   }
-  
+
   /* 【关键修改】Organizers 人名黑色加粗 */
   .organizer-item h3 { 
       text-align: center !important; 
@@ -117,14 +128,14 @@ header:
       color: #000 !important; /* 黑色 */
       font-weight: bold !important; /* 加粗 */
   }
-  
+
   .organizer-item p { 
     text-align: center !important; 
     font-size: 0.85em !important; 
     line-height: 1.4 !important;    
     color: #444;
   }
-  
+
   .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
   /* 8. 封面标题样式 */
@@ -160,7 +171,7 @@ header:
     /* 去掉了原来的 border, padding, background-color */
     text-transform: uppercase;
   }
-  
+
   /* 10. 折叠面板样式 */
   details {
     width: 100%;
@@ -241,7 +252,7 @@ header:
   .greedy-nav .theme-toggle, .greedy-nav button, #theme-toggle, button[title="Toggle theme"] { display: none !important; }
   .page__footer-follow, .social-icons { display: none !important; }
   .page__footer-copyright { display: block !important; margin: 0 auto !important; text-align: center !important; }
-  
+
   /* 强制白天模式 */
   @media (prefers-color-scheme: dark) {
     body, .page, .page__content { background-color: #fff !important; color: #333 !important; }
@@ -275,7 +286,7 @@ header:
 <div class="section-box">
   <h2>Paper Submission and Dates</h2>
   <p>Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.</p>
-  
+
   <h3>Important Dates</h3>
   <table class="dates-table">
     <tr>
@@ -369,27 +380,88 @@ header:
         <td class="time-col">13:30 - 14:00</td>
         <td class="event-col">Invited Talk (TBA)</td>
       </tr>
-      <tr>
-        <td class="time-col">14:00 - 14:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:30 - 15:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">15:00 - 15:30</td>
-        <td class="event-col">Afternoon Tea Break</td>
-      </tr>
     </table>
   </details>
 
-  <details>
-    <summary>Interactive Session</summary>
+  <details open>
+    <summary>QSAFE Workshop Schedule</summary>
     <table class="program-table">
       <tr>
-        <td class="time-col">15:30 - 16:30</td>
-        <td class="event-col">Panel Discussion</td>
+        <th>Time</th>
+        <th>Type</th>
+        <th>Title / Activity</th>
+        <th>Speaker</th>
+        <th>Topic</th>
+      </tr>
+      <tr>
+        <td class="time-col">14:00 - 14:05</td>
+        <td class="type-col">Opening</td>
+        <td class="title-col">Opening Remarks and Welcome</td>
+        <td class="speaker-col"></td>
+        <td class="topic-col"></td>
+      </tr>
+      <tr>
+        <td class="time-col">14:05 - 14:30</td>
+        <td class="type-col">Invited Talk</td>
+        <td class="title-col">Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS</td>
+        <td class="speaker-col">Divesh Aggarwal</td>
+        <td class="topic-col">Lattice-Based Cryptography</td>
+      </tr>
+      <tr>
+        <td class="time-col">14:30 - 14:55</td>
+        <td class="type-col">Invited Talk</td>
+        <td class="title-col">Code-Based Cryptography: Public-Key Encryption</td>
+        <td class="speaker-col">Sebastian Bitzer</td>
+        <td class="topic-col">Code-Based Cryptography</td>
+      </tr>
+      <tr>
+        <td class="time-col">14:55 - 15:20</td>
+        <td class="type-col">Invited Talk</td>
+        <td class="title-col">Code-Based Cryptography: Digital Signatures</td>
+        <td class="speaker-col">Paolo Santini</td>
+        <td class="topic-col">Code-Based Cryptography</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:20 - 15:40</td>
+        <td class="type-col">Break</td>
+        <td class="title-col">Official Tea Break</td>
+        <td class="speaker-col"></td>
+        <td class="topic-col"></td>
+      </tr>
+      <tr>
+        <td class="time-col">15:40 - 16:05</td>
+        <td class="type-col">Invited Talk</td>
+        <td class="title-col">New decoding approaches based on machine learning and optimization</td>
+        <td class="speaker-col">Alexey Frolov</td>
+        <td class="topic-col">Conventional Coding and Decoding Algorithms</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:05 - 16:30</td>
+        <td class="type-col">Invited Talk</td>
+        <td class="title-col">Ideal Linear Secret Sharing Schemes for Arbitrary Access Structures</td>
+        <td class="speaker-col">Chunming Tang</td>
+        <td class="topic-col">Classical Coding for PQC</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:30 - 16:45</td>
+        <td class="type-col">Accepted Paper Presentation</td>
+        <td class="title-col">Serial List Generators in Syndrome Decoding</td>
+        <td class="speaker-col">Jifan Liang</td>
+        <td class="topic-col">Conventional Coding and Decoding Algorithms</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:45 - 17:00</td>
+        <td class="type-col">Accepted Paper Presentation</td>
+        <td class="title-col">A Magic State Protection Scheme for Quantum Homomorphic Encryption Based on CSS Code</td>
+        <td class="speaker-col">Tao Shang</td>
+        <td class="topic-col">Quantum Error Correction</td>
+      </tr>
+      <tr>
+        <td class="time-col">17:00 - 18:00</td>
+        <td class="type-col">Discussion / Networking</td>
+        <td class="title-col">Open Problem Discussion and Networking Session</td>
+        <td class="speaker-col"></td>
+        <td class="topic-col"></td>
       </tr>
     </table>
   </details>
@@ -413,7 +485,7 @@ header:
       <p>Jinan University, China<br>Email: lsx07@jnu.edu.cn</p>
       <a href="https://sites.google.com/view/shanx" target="_blank" class="btn btn--info">Personal website</a>
     </div>
-
+    
     <div class="organizer-item">
       <img src="/images/ling.jpg" alt="Ling Liu">
       <h3>Ling Liu</h3>

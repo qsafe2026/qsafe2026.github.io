@@ -8,17 +8,19 @@ author_profile: false
   h2, h3 { color: #0056b3 !important; }
   .program-table {
     width: 100%;
-    min-width: 980px;
+    min-width: 900px;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 18px;
+    font-size: 15.5px;
   }
   .program-table th,
   .program-table td {
-    padding: 13px 16px;
+    padding: 10px 12px;
     border-bottom: 1px solid #e6edf5;
     text-align: left;
     vertical-align: top;
+    font-size: 15.5px;
+    line-height: 1.45;
     transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   }
   .program-table th {

@@ -75,10 +75,10 @@ header:
   .program-section {
     width: 70% !important;
     min-width: 800px !important;
-    padding: 40px 12% !important;
+    padding: 40px 4% !important;
   }
   .program-section details {
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
   }
 
@@ -89,10 +89,13 @@ header:
     border-spacing: 0;
     width: 100%; 
   }
-  .program-table { font-size: 15.5px !important; }
+  .program-table {
+    font-size: 14.5px !important;
+    table-layout: fixed;
+  }
   .dates-table { font-size: 18px !important; }
   .program-table td, .dates-table td {
-    padding: 13px 16px;
+    padding: 9px 10px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
     text-align: left; 
@@ -100,8 +103,8 @@ header:
   }
   .program-table td,
   .program-table th {
-    font-size: 15.5px !important;
-    line-height: 1.45 !important;
+    font-size: 14.5px !important;
+    line-height: 1.4 !important;
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
 
@@ -114,15 +117,15 @@ header:
     box-shadow: inset 4px 0 0 #0056b3, inset 0 1px 0 rgba(0, 86, 179, 0.10), inset 0 -1px 0 rgba(0, 86, 179, 0.10);
   }
 
-  .time-col { width: 150px; font-weight: bold; color: #555; white-space: nowrap !important; }
-  .type-col { width: 150px; font-weight: bold; color: #333; white-space: nowrap !important; }
+  .time-col { width: 115px; font-weight: bold; color: #555; white-space: nowrap !important; }
+  .type-col { width: 120px; font-weight: bold; color: #333; }
   .title-col { width: auto; }
-  .speaker-col { width: 180px; font-weight: bold; color: #333; white-space: nowrap !important; }
-  .topic-col { width: 220px; color: #555; }
+  .speaker-col { width: 135px; font-weight: bold; color: #333; white-space: nowrap !important; }
+  .topic-col { width: 145px; color: #555; }
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
   .program-table th {
-    padding: 10px 12px;
+    padding: 9px 10px;
     border-bottom: 2px solid #d0d7de;
     text-align: left;
     color: #0056b3;
@@ -130,19 +133,20 @@ header:
     white-space: nowrap !important;
   }
   .schedule-table {
-    min-width: 960px;
+    min-width: 0;
+    width: 100%;
     overflow: hidden;
   }
   .schedule-table td {
     border-bottom: 1px solid #e6edf5;
   }
-  .schedule-table .time-col { width: 130px; }
-  .schedule-table .type-col { width: 160px; }
-  .schedule-table .speaker-col { width: 150px; }
-  .schedule-table .topic-col { width: 190px; }
+  .schedule-table .time-col { width: 115px; }
+  .schedule-table .type-col { width: 125px; }
+  .schedule-table .speaker-col { width: 140px; }
+  .schedule-table .topic-col { width: 145px; }
   .schedule-table .title-col {
-    min-width: 330px;
-    line-height: 1.5 !important;
+    min-width: 0;
+    line-height: 1.4 !important;
   }
 
   /* 7. Organizers 样式 (照片长方形) */
@@ -264,7 +268,7 @@ header:
       -webkit-overflow-scrolling: touch; 
     }
     .schedule-table {
-      min-width: 900px !important;
+      min-width: 820px !important;
     }
     
     .page__hero--overlay {

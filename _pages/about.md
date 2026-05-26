@@ -72,35 +72,71 @@ header:
     text-align: left !important; 
     box-sizing: border-box !important; 
   }
+  .program-section {
+    width: 96% !important;
+    min-width: 980px !important;
+    padding: 34px 2.5% !important;
+  }
+  .program-section details {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 
   /* 6. 表格样式 */
   .program-table, .dates-table {
     min-width: 500px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 18px !important;
     width: 100%; 
   }
   .program-table td, .dates-table td {
-    padding: 12px 15px;
+    padding: 13px 16px;
     border-bottom: 1px dashed #ddd;
     vertical-align: top;
     text-align: left; 
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   }
   .program-table tr:last-child td, .dates-table tr:last-child td { border-bottom: none; }
 
-  .time-col { width: 160px; font-weight: bold; color: #555; }
-  .type-col { width: 150px; font-weight: bold; color: #333; }
-  .title-col { width: 35%; }
-  .speaker-col { width: 170px; font-weight: bold; color: #333; }
+  .program-table tr:hover td {
+    background: linear-gradient(90deg, rgba(0, 86, 179, 0.10), rgba(235, 246, 255, 0.82));
+    color: #1f2933;
+    box-shadow: inset 0 1px 0 rgba(0, 86, 179, 0.10), inset 0 -1px 0 rgba(0, 86, 179, 0.10);
+  }
+  .program-table tr:hover td:first-child {
+    box-shadow: inset 4px 0 0 #0056b3, inset 0 1px 0 rgba(0, 86, 179, 0.10), inset 0 -1px 0 rgba(0, 86, 179, 0.10);
+  }
+
+  .time-col { width: 150px; font-weight: bold; color: #555; white-space: nowrap !important; }
+  .type-col { width: 150px; font-weight: bold; color: #333; white-space: nowrap !important; }
+  .title-col { width: auto; }
+  .speaker-col { width: 180px; font-weight: bold; color: #333; white-space: nowrap !important; }
   .topic-col { width: 220px; color: #555; }
   .label-col { width: 280px !important; white-space: nowrap !important; font-weight: bold; color: #333; }
   .date-col { color: #d90000; font-weight: bold; }
   .program-table th {
-    padding: 10px 15px;
+    padding: 11px 16px;
     border-bottom: 2px solid #d0d7de;
     text-align: left;
     color: #0056b3;
     font-weight: 700;
+    white-space: nowrap !important;
+  }
+  .schedule-table {
+    min-width: 1040px;
+    overflow: hidden;
+  }
+  .schedule-table td {
+    border-bottom: 1px solid #e6edf5;
+  }
+  .schedule-table .time-col { width: 145px; }
+  .schedule-table .type-col { width: 180px; }
+  .schedule-table .speaker-col { width: 170px; }
+  .schedule-table .topic-col { width: 210px; }
+  .schedule-table .title-col {
+    min-width: 360px;
+    line-height: 1.5 !important;
   }
 
   /* 7. Organizers 样式 (照片长方形) */
@@ -209,12 +245,20 @@ header:
       margin: 0 auto 30px auto !important; 
       padding: 20px 15px !important; 
     }
+    .program-section {
+      width: 96% !important;
+      min-width: 0 !important;
+      padding: 20px 12px !important;
+    }
     .section-box table, .program-table, .dates-table {
       display: block !important;    
       width: 100% !important;       
       min-width: 0 !important;      
       overflow-x: auto !important;  
       -webkit-overflow-scrolling: touch; 
+    }
+    .schedule-table {
+      min-width: 980px !important;
     }
     
     .page__hero--overlay {
@@ -326,7 +370,7 @@ header:
 </div>
 
 <div id="program"></div>
-<div class="section-box">
+<div class="section-box program-section">
   <h2>Tentative Program</h2>
 
   <details open>
@@ -385,7 +429,7 @@ header:
 
   <details open>
     <summary>QSAFE Workshop Schedule</summary>
-    <table class="program-table">
+    <table class="program-table schedule-table">
       <tr>
         <th>Time</th>
         <th>Type</th>

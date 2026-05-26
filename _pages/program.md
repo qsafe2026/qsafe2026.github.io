@@ -6,30 +6,183 @@ author_profile: false
 <style>
   .page__title { color: #0056b3 !important; }
   h2, h3 { color: #0056b3 !important; }
+  .program-table {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 18px;
+  }
+  .program-table th,
+  .program-table td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #e6edf5;
+    text-align: left;
+    vertical-align: top;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .program-table th {
+    color: #0056b3;
+    border-bottom: 2px solid #d0d7de;
+    white-space: nowrap;
+  }
+  .program-table tr:hover td {
+    background: linear-gradient(90deg, rgba(0, 86, 179, 0.10), rgba(235, 246, 255, 0.82));
+    color: #1f2933;
+    box-shadow: inset 0 1px 0 rgba(0, 86, 179, 0.10), inset 0 -1px 0 rgba(0, 86, 179, 0.10);
+  }
+  .program-table tr:hover td:first-child {
+    box-shadow: inset 4px 0 0 #0056b3, inset 0 1px 0 rgba(0, 86, 179, 0.10), inset 0 -1px 0 rgba(0, 86, 179, 0.10);
+  }
+  .time-col,
+  .type-col,
+  .speaker-col {
+    white-space: nowrap;
+    font-weight: 700;
+  }
+  .program-scroll {
+    overflow-x: auto;
+    margin-bottom: 28px;
+  }
 </style>
-### Session I: Code-Based Cryptography (CBC)
-* **09:00 - 09:30** | Invited Talk (TBA)
-* **09:30 - 10:00** | Selected Contributors
-* **10:00 - 10:30** | Selected Contributors
-* **10:30 - 11:00** | Morning Tea Break
 
-### Session II: Lattice-Based Cryptography (LBC)
-* **11:00 - 11:30** | Invited Talk (TBA)
-* **11:30 - 12:00** | Selected Contributors
-* **12:00 - 12:30** | Selected Contributors
-* **12:30 - 13:30** | Lunch Break
+### Tentative Program
 
-### Session III: Quantum Error Correction Codes (QECC)
-* **13:30 - 14:00** | Invited Talk (TBA)
+<div class="program-scroll">
+  <table class="program-table">
+    <tr>
+      <th>Time</th>
+      <th>Session</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td class="time-col">09:00 - 09:30</td>
+      <td>Session I: Code-Based Cryptography (CBC)</td>
+      <td>Invited Talk (TBA)</td>
+    </tr>
+    <tr>
+      <td class="time-col">09:30 - 10:00</td>
+      <td>Session I: Code-Based Cryptography (CBC)</td>
+      <td>Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">10:00 - 10:30</td>
+      <td>Session I: Code-Based Cryptography (CBC)</td>
+      <td>Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">10:30 - 11:00</td>
+      <td>Session I: Code-Based Cryptography (CBC)</td>
+      <td>Morning Tea Break</td>
+    </tr>
+    <tr>
+      <td class="time-col">11:00 - 11:30</td>
+      <td>Session II: Lattice-Based Cryptography (LBC)</td>
+      <td>Invited Talk (TBA)</td>
+    </tr>
+    <tr>
+      <td class="time-col">11:30 - 12:00</td>
+      <td>Session II: Lattice-Based Cryptography (LBC)</td>
+      <td>Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">12:00 - 12:30</td>
+      <td>Session II: Lattice-Based Cryptography (LBC)</td>
+      <td>Selected Contributors</td>
+    </tr>
+    <tr>
+      <td class="time-col">12:30 - 13:30</td>
+      <td>Session II: Lattice-Based Cryptography (LBC)</td>
+      <td>Lunch Break</td>
+    </tr>
+    <tr>
+      <td class="time-col">13:30 - 14:00</td>
+      <td>Session III: Quantum Error Correction Codes (QECC)</td>
+      <td>Invited Talk (TBA)</td>
+    </tr>
+  </table>
+</div>
 
 ### QSAFE Workshop Schedule
-* **14:00 - 14:05** | Opening | Opening Remarks and Welcome
-* **14:05 - 14:30** | Invited Talk | Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS | Divesh Aggarwal | Lattice-Based Cryptography
-* **14:30 - 14:55** | Invited Talk | Code-Based Cryptography: Public-Key Encryption | Sebastian Bitzer | Code-Based Cryptography
-* **14:55 - 15:20** | Invited Talk | Code-Based Cryptography: Digital Signatures | Paolo Santini | Code-Based Cryptography
-* **15:20 - 15:40** | Break | Official Tea Break
-* **15:40 - 16:05** | Invited Talk | New decoding approaches based on machine learning and optimization | Alexey Frolov | Conventional Coding and Decoding Algorithms
-* **16:05 - 16:30** | Invited Talk | Ideal Linear Secret Sharing Schemes for Arbitrary Access Structures | Chunming Tang | Classical Coding for PQC
-* **16:30 - 16:45** | Accepted Paper Presentation | Serial List Generators in Syndrome Decoding | Jifan Liang | Conventional Coding and Decoding Algorithms
-* **16:45 - 17:00** | Accepted Paper Presentation | A Magic State Protection Scheme for Quantum Homomorphic Encryption Based on CSS Code | Tao Shang | Quantum Error Correction
-* **17:00 - 18:00** | Discussion / Networking | Open Problem Discussion and Networking Session
+
+<div class="program-scroll">
+  <table class="program-table">
+    <tr>
+      <th>Time</th>
+      <th>Type</th>
+      <th>Title / Activity</th>
+      <th>Speaker</th>
+      <th>Topic</th>
+    </tr>
+    <tr>
+      <td class="time-col">14:00 - 14:05</td>
+      <td class="type-col">Opening</td>
+      <td>Opening Remarks and Welcome</td>
+      <td class="speaker-col"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="time-col">14:05 - 14:30</td>
+      <td class="type-col">Invited Talk</td>
+      <td>Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS</td>
+      <td class="speaker-col">Divesh Aggarwal</td>
+      <td>Lattice-Based Cryptography</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:30 - 14:55</td>
+      <td class="type-col">Invited Talk</td>
+      <td>Code-Based Cryptography: Public-Key Encryption</td>
+      <td class="speaker-col">Sebastian Bitzer</td>
+      <td>Code-Based Cryptography</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:55 - 15:20</td>
+      <td class="type-col">Invited Talk</td>
+      <td>Code-Based Cryptography: Digital Signatures</td>
+      <td class="speaker-col">Paolo Santini</td>
+      <td>Code-Based Cryptography</td>
+    </tr>
+    <tr>
+      <td class="time-col">15:20 - 15:40</td>
+      <td class="type-col">Break</td>
+      <td>Official Tea Break</td>
+      <td class="speaker-col"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="time-col">15:40 - 16:05</td>
+      <td class="type-col">Invited Talk</td>
+      <td>New decoding approaches based on machine learning and optimization</td>
+      <td class="speaker-col">Alexey Frolov</td>
+      <td>Conventional Coding and Decoding Algorithms</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:05 - 16:30</td>
+      <td class="type-col">Invited Talk</td>
+      <td>Ideal Linear Secret Sharing Schemes for Arbitrary Access Structures</td>
+      <td class="speaker-col">Chunming Tang</td>
+      <td>Classical Coding for PQC</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:30 - 16:45</td>
+      <td class="type-col">Accepted Paper Presentation</td>
+      <td>Serial List Generators in Syndrome Decoding</td>
+      <td class="speaker-col">Jifan Liang</td>
+      <td>Conventional Coding and Decoding Algorithms</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:45 - 17:00</td>
+      <td class="type-col">Accepted Paper Presentation</td>
+      <td>A Magic State Protection Scheme for Quantum Homomorphic Encryption Based on CSS Code</td>
+      <td class="speaker-col">Tao Shang</td>
+      <td>Quantum Error Correction</td>
+    </tr>
+    <tr>
+      <td class="time-col">17:00 - 18:00</td>
+      <td class="type-col">Discussion / Networking</td>
+      <td>Open Problem Discussion and Networking Session</td>
+      <td class="speaker-col"></td>
+      <td></td>
+    </tr>
+  </table>
+</div>

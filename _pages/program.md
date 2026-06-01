@@ -1,6 +1,6 @@
 ---
 permalink: /program/
-title: "Tentative Program"
+title: "Workshop Schedule"
 author_profile: false
 ---
 <style>
@@ -47,8 +47,6 @@ author_profile: false
     margin-bottom: 28px;
   }
 </style>
-
-### QSAFE Workshop Schedule
 
 <div class="program-scroll">
   <table class="program-table">

@@ -48,63 +48,6 @@ author_profile: false
   }
 </style>
 
-### Tentative Program
-
-<div class="program-scroll">
-  <table class="program-table">
-    <tr>
-      <th>Time</th>
-      <th>Session</th>
-      <th>Activity</th>
-    </tr>
-    <tr>
-      <td class="time-col">09:00 - 09:30</td>
-      <td>Session I: Code-Based Cryptography (CBC)</td>
-      <td>Invited Talk (TBA)</td>
-    </tr>
-    <tr>
-      <td class="time-col">09:30 - 10:00</td>
-      <td>Session I: Code-Based Cryptography (CBC)</td>
-      <td>Selected Contributors</td>
-    </tr>
-    <tr>
-      <td class="time-col">10:00 - 10:30</td>
-      <td>Session I: Code-Based Cryptography (CBC)</td>
-      <td>Selected Contributors</td>
-    </tr>
-    <tr>
-      <td class="time-col">10:30 - 11:00</td>
-      <td>Session I: Code-Based Cryptography (CBC)</td>
-      <td>Morning Tea Break</td>
-    </tr>
-    <tr>
-      <td class="time-col">11:00 - 11:30</td>
-      <td>Session II: Lattice-Based Cryptography (LBC)</td>
-      <td>Invited Talk (TBA)</td>
-    </tr>
-    <tr>
-      <td class="time-col">11:30 - 12:00</td>
-      <td>Session II: Lattice-Based Cryptography (LBC)</td>
-      <td>Selected Contributors</td>
-    </tr>
-    <tr>
-      <td class="time-col">12:00 - 12:30</td>
-      <td>Session II: Lattice-Based Cryptography (LBC)</td>
-      <td>Selected Contributors</td>
-    </tr>
-    <tr>
-      <td class="time-col">12:30 - 13:30</td>
-      <td>Session II: Lattice-Based Cryptography (LBC)</td>
-      <td>Lunch Break</td>
-    </tr>
-    <tr>
-      <td class="time-col">13:30 - 14:00</td>
-      <td>Session III: Quantum Error Correction Codes (QECC)</td>
-      <td>Invited Talk (TBA)</td>
-    </tr>
-  </table>
-</div>
-
 ### QSAFE Workshop Schedule
 
 <div class="program-scroll">

@@ -381,90 +381,87 @@ header:
 
 <div id="program"></div>
 <div class="section-box program-section">
-  <h2>Tentative Program</h2>
+  <h2>Workshop Schedule</h2>
 
-  <details open>
-    <summary>QSAFE Workshop Schedule</summary>
-    <table class="program-table schedule-table">
-      <tr>
-        <th>Time</th>
-        <th>Type</th>
-        <th>Title / Activity</th>
-        <th>Speaker</th>
-        <th>Topic</th>
-      </tr>
-      <tr>
-        <td class="time-col">14:00 - 14:05</td>
-        <td class="type-col">Opening</td>
-        <td class="title-col">Opening Remarks and Welcome</td>
-        <td class="speaker-col"></td>
-        <td class="topic-col"></td>
-      </tr>
-      <tr>
-        <td class="time-col">14:05 - 14:30</td>
-        <td class="type-col">Invited Talk</td>
-        <td class="title-col">Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS</td>
-        <td class="speaker-col">Divesh Aggarwal</td>
-        <td class="topic-col">Lattice-Based Cryptography</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:30 - 14:55</td>
-        <td class="type-col">Invited Talk</td>
-        <td class="title-col">Code-Based Cryptography: Public-Key Encryption</td>
-        <td class="speaker-col">Sebastian Bitzer</td>
-        <td class="topic-col">Code-Based Cryptography</td>
-      </tr>
-      <tr>
-        <td class="time-col">14:55 - 15:20</td>
-        <td class="type-col">Invited Talk</td>
-        <td class="title-col">Code-Based Cryptography: Digital Signatures</td>
-        <td class="speaker-col">Paolo Santini</td>
-        <td class="topic-col">Code-Based Cryptography</td>
-      </tr>
-      <tr>
-        <td class="time-col">15:20 - 15:40</td>
-        <td class="type-col">Break</td>
-        <td class="title-col">Official Tea Break</td>
-        <td class="speaker-col"></td>
-        <td class="topic-col"></td>
-      </tr>
-      <tr>
-        <td class="time-col">15:40 - 16:05</td>
-        <td class="type-col">Invited Talk</td>
-        <td class="title-col">New decoding approaches based on machine learning and optimization</td>
-        <td class="speaker-col">Alexey Frolov</td>
-        <td class="topic-col">Conventional Coding and Decoding Algorithms</td>
-      </tr>
-      <tr>
-        <td class="time-col">16:05 - 16:30</td>
-        <td class="type-col">Invited Talk</td>
-        <td class="title-col">Ideal Linear Secret Sharing Schemes for Arbitrary Access Structures</td>
-        <td class="speaker-col">Chunming Tang</td>
-        <td class="topic-col">Classical Coding for PQC</td>
-      </tr>
-      <tr>
-        <td class="time-col">16:30 - 16:45</td>
-        <td class="type-col">Accepted Paper Presentation</td>
-        <td class="title-col">Serial List Generators in Syndrome Decoding</td>
-        <td class="speaker-col">Jifan Liang</td>
-        <td class="topic-col">Conventional Coding and Decoding Algorithms</td>
-      </tr>
-      <tr>
-        <td class="time-col">16:45 - 17:00</td>
-        <td class="type-col">Accepted Paper Presentation</td>
-        <td class="title-col">A Magic State Protection Scheme for Quantum Homomorphic Encryption Based on CSS Code</td>
-        <td class="speaker-col">Tao Shang</td>
-        <td class="topic-col">Quantum Error Correction</td>
-      </tr>
-      <tr>
-        <td class="time-col">17:00 - 18:00</td>
-        <td class="type-col">Discussion / Networking</td>
-        <td class="title-col">Open Problem Discussion and Networking Session</td>
-        <td class="speaker-col"></td>
-        <td class="topic-col"></td>
-      </tr>
-    </table>
-  </details>
+  <table class="program-table schedule-table">
+    <tr>
+      <th>Time</th>
+      <th>Type</th>
+      <th>Title / Activity</th>
+      <th>Speaker</th>
+      <th>Topic</th>
+    </tr>
+    <tr>
+      <td class="time-col">14:00 - 14:05</td>
+      <td class="type-col">Opening</td>
+      <td class="title-col">Opening Remarks and Welcome</td>
+      <td class="speaker-col"></td>
+      <td class="topic-col"></td>
+    </tr>
+    <tr>
+      <td class="time-col">14:05 - 14:30</td>
+      <td class="type-col">Invited Talk</td>
+      <td class="title-col">Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS</td>
+      <td class="speaker-col">Divesh Aggarwal</td>
+      <td class="topic-col">Lattice-Based Cryptography</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:30 - 14:55</td>
+      <td class="type-col">Invited Talk</td>
+      <td class="title-col">Code-Based Cryptography: Public-Key Encryption</td>
+      <td class="speaker-col">Sebastian Bitzer</td>
+      <td class="topic-col">Code-Based Cryptography</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:55 - 15:20</td>
+      <td class="type-col">Invited Talk</td>
+      <td class="title-col">Code-Based Cryptography: Digital Signatures</td>
+      <td class="speaker-col">Paolo Santini</td>
+      <td class="topic-col">Code-Based Cryptography</td>
+    </tr>
+    <tr>
+      <td class="time-col">15:20 - 15:40</td>
+      <td class="type-col">Break</td>
+      <td class="title-col">Official Tea Break</td>
+      <td class="speaker-col"></td>
+      <td class="topic-col"></td>
+    </tr>
+    <tr>
+      <td class="time-col">15:40 - 16:05</td>
+      <td class="type-col">Invited Talk</td>
+      <td class="title-col">New decoding approaches based on machine learning and optimization</td>
+      <td class="speaker-col">Alexey Frolov</td>
+      <td class="topic-col">Conventional Coding and Decoding Algorithms</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:05 - 16:30</td>
+      <td class="type-col">Invited Talk</td>
+      <td class="title-col">Ideal Linear Secret Sharing Schemes for Arbitrary Access Structures</td>
+      <td class="speaker-col">Chunming Tang</td>
+      <td class="topic-col">Classical Coding for PQC</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:30 - 16:45</td>
+      <td class="type-col">Accepted Paper Presentation</td>
+      <td class="title-col">Serial List Generators in Syndrome Decoding</td>
+      <td class="speaker-col">Jifan Liang</td>
+      <td class="topic-col">Conventional Coding and Decoding Algorithms</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:45 - 17:00</td>
+      <td class="type-col">Accepted Paper Presentation</td>
+      <td class="title-col">A Magic State Protection Scheme for Quantum Homomorphic Encryption Based on CSS Code</td>
+      <td class="speaker-col">Tao Shang</td>
+      <td class="topic-col">Quantum Error Correction</td>
+    </tr>
+    <tr>
+      <td class="time-col">17:00 - 18:00</td>
+      <td class="type-col">Discussion / Networking</td>
+      <td class="title-col">Open Problem Discussion and Networking Session</td>
+      <td class="speaker-col"></td>
+      <td class="topic-col"></td>
+    </tr>
+  </table>
 </div>
 
 <div id="organizers"></div>

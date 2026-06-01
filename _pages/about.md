@@ -384,60 +384,6 @@ header:
   <h2>Tentative Program</h2>
 
   <details open>
-    <summary>Session I: Code-Based Cryptography (CBC)</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">09:00 - 09:30</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">09:30 - 10:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">10:00 - 10:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">10:30 - 11:00</td>
-        <td class="event-col">Morning Tea Break</td>
-      </tr>
-    </table>
-  </details>
-
-  <details>
-    <summary>Session II: Lattice-Based Cryptography (LBC)</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">11:00 - 11:30</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-      <tr>
-        <td class="time-col">11:30 - 12:00</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">12:00 - 12:30</td>
-        <td class="event-col">Selected Contributors</td>
-      </tr>
-      <tr>
-        <td class="time-col">12:30 - 13:30</td>
-        <td class="event-col">Lunch Break</td>
-      </tr>
-    </table>
-  </details>
-
-  <details>
-    <summary>Session III: Quantum Error Correction Codes (QECC)</summary>
-    <table class="program-table">
-      <tr>
-        <td class="time-col">13:30 - 14:00</td>
-        <td class="event-col">Invited Talk (TBA)</td>
-      </tr>
-    </table>
-  </details>
-
-  <details open>
     <summary>QSAFE Workshop Schedule</summary>
     <table class="program-table schedule-table">
       <tr>

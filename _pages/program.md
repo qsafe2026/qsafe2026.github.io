@@ -67,9 +67,9 @@ author_profile: false
     <tr>
       <td class="time-col">14:05 - 14:30</td>
       <td class="type-col">Invited Talk</td>
-      <td>Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS</td>
-      <td class="speaker-col">Divesh Aggarwal</td>
-      <td>Lattice-Based Cryptography</td>
+      <td>New decoding approaches based on machine learning and optimization</td>
+      <td class="speaker-col">Alexey Frolov</td>
+      <td>Conventional Coding and Decoding Algorithms</td>
     </tr>
     <tr>
       <td class="time-col">14:30 - 14:55</td>
@@ -95,9 +95,9 @@ author_profile: false
     <tr>
       <td class="time-col">15:40 - 16:05</td>
       <td class="type-col">Invited Talk</td>
-      <td>New decoding approaches based on machine learning and optimization</td>
-      <td class="speaker-col">Alexey Frolov</td>
-      <td>Conventional Coding and Decoding Algorithms</td>
+      <td>Time vs Success Probability Tradeoff for SVP/BDD with Implications to LWE and SIS</td>
+      <td class="speaker-col">Divesh Aggarwal</td>
+      <td>Lattice-Based Cryptography</td>
     </tr>
     <tr>
       <td class="time-col">16:05 - 16:30</td>
